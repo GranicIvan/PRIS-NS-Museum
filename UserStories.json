@@ -1,22 +1,59 @@
 {
-  "Story_1":{
+    "Story_1":
+    {
+        "index": 0,
+        "story_pts": "1",
+        "date_created": "11. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Users...",
+        "comment": "comment",
+        "acceptance criteria":
+        [
+            {
+                "test": "try it with...",
+                "status": "Fails"
+            },
+            {
+                "test": "try it with...",
+                "status": "Fails"
+            },
+            {
+                "test": "try it with...",
+                "status": "Fails"
+            }
+        ]
+    },
 
-    "index": 0,
-    "story_pts": "1",
-    "date_created": "11. Apr 2024.",
-    "part_ofSprint": "None",
-    "status" : "TODO",
-    "assigned_to" : "None",
-    "date_started" : "None",
-    "date_completed" : "None",
-    "story" : "Users...",
-    "comment" : "comment",
-    "acceptance criteria" : [
-      {"test" : "try it with..." , "status" : "Fails"     },
-      {"test" : "try it with..." , "status" : "Fails"     },
-      {"test" : "try it with..." , "status" : "Fails"     }
-    ]
-
-    
-  } 
+        "Baza":
+    {
+        "index": 1,
+        "story_pts": "200",
+        "date_created": "11. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Pravljenje MongoDB baze, naloga i svih potrebnih stavki",
+        "comment": "Baza ce sadrzati pdoatke o periodima, znamenitim ljudima, mestima/muzeijima/znamenitostima, delima, korisnicima, rutama",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce dodavanje u sve 'tabele' ",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce citanje iz svih 'tabela'",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce menjanje svih 'tabela'",
+                "status": "Fails"
+            }
+        ]
+    }
 }
