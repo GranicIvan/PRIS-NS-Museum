@@ -1,0 +1,22 @@
+{
+  "Story_1":{
+
+    "index": 0,
+    "story_pts": "1",
+    "date_created": "11. Apr 2024.",
+    "part_ofSprint": "None",
+    "status" : "TODO",
+    "assigned_to" : "None",
+    "date_started" : "None",
+    "date_completed" : "None",
+    "story" : "Users...",
+    "comment" : "comment",
+    "acceptance criteria" : [
+      {"test" : "try it with..." , "status" : "Fails"     },
+      {"test" : "try it with..." , "status" : "Fails"     },
+      {"test" : "try it with..." , "status" : "Fails"     }
+    ]
+
+    
+  } 
+}
