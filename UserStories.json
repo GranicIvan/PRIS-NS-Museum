@@ -55,5 +55,30 @@
                 "status": "Fails"
             }
         ]
+    },
+        "Pravljnje_naloga":
+    {
+        "index": 2,
+        "story_pts": "8",
+        "date_created": "11. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze da napravi nalog koristeci mail, sifru, naziv",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce dodavanje novog korisnika ",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske ako fali neki parametar",
+                "status": "Fails"
+            }
+
+        ]
     }
 }
