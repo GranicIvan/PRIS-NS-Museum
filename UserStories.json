@@ -204,7 +204,7 @@
                 "status": "Fails"
             },
             {
-                "test": Moguce je izmeniti postojece podatke o licnosti",
+                "test": "Moguce je izmeniti postojece podatke o licnosti",
                 "status": "Fails"
             }
          
