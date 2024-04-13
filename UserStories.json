@@ -242,7 +242,186 @@
             }
         ]
     },
-
+"Izmena_muzeja":
+    {
+        "index": 13,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Zaposleni u muzejima imaju mogucnost izmene muzeja",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguca izmena muzeja",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju neuspele izmene muzeja",
+                "status": "Fails"
+            }
+        ]
+    },
+    "Dodavanje licnosti":
+    {
+        "index": 14,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Zaposleni u muzejima imaju mogucnost dodavanja licnosti u odnosu na umetnicki pravac",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce dodavanje licnosti",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da fali neki podatak",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da dodavanje licnosti nije uspelo",
+                "status": "Fails"
+            }
+        ]
+    },
+    "Izmena licnosti":
+    {
+        "index": 15,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Zaposleni u muzejima imaju mogucnost izmene licnosti u odnosu na umetnicki pravac",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguca izmena licnosti",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da izmena nije uspela",
+                "status": "Fails"
+            }
+        ]
+    },
+    "Dodavanje perioda":
+    {
+        "index": 16,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Zaposleni u muzejima imaju mogucnost dodavanja vremenskog perioda",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce dodavanje vremenskog perioda",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da dodavanje vremenskog perioda nije uspelo",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da fali podatak o vremenskom periodu",
+                "status": "Fails"
+            }
+        ]
+    },
+    "Izmena perioda":
+    {
+        "index": 17,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Zaposleni u muzejima imaju mogucnost izmene vremenskog perioda",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguca izmena vremenskog perioda",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da izmena vremenskog perioda nije uspela",
+                "status": "Fails"
+            }
+        ]
+    },
+    "Dodavanje dela":
+    {
+        "index": 18,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Zaposleni u muzejima imaju mogucnost dodavanja umetnickog dela u odnosu na pravac",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce dodavanje umetnickog dela",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da dodavanje umetnickog dela nije uspelo",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da fali podatak o umetnickom delu",
+                "status": "Fails"
+            }
+        ]
+    },
+    "Izmena dela":
+    {
+        "index": 19,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Zaposleni u muzejima imaju mogucnost izmene umetnickog dela u odnosu na pravac",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguca izmena umetnickog dela",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da izmena umetnickog dela nije uspela",
+                "status": "Fails"
+            }
+        ]
+    }
 
 
 
