@@ -80,5 +80,176 @@
             }
 
         ]
-    }
+    },
+        "Izmena muzeja":
+    {
+        "index": 7,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da izmeni podatke o postojecem muzeju",
+        "comment": "Muzej sadrzi naziv, adresu, koordinate, ime na google maps, vremenski period kom pripada i opis ",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je brisanje muzeja",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je menjati naziv muzeja, opis, adresu , koordinate",
+                "status": "Fails"
+            }
+        ]
+    },
+        "Dodavanje perioda":
+    {
+        "index": 8,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da dodaje novi period ",
+        "comment": "Period sadrzi naziv, trajanje, podrucje, opis, stvari koje se mogu videti, umetnike",
+        "acceptance criteria":
+        [
+            {
+                "test": "Izbacivanje greske ukoliko fali parametar tipa naziva i trajanja",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske ukoliko takav  period koji zeli da unese vec postoji ",
+                "status": "Fails"
+            } 
+        ]
+    },
+        "Izmena perioda":
+    {
+        "index": 9,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da menja podatke o postojecem periodu",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je brisanje perioda",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je menjanje naziva perioda, trajanja, podrucja, opisa, itd",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je dodavanje novih stvari koje pripadaju tom periodu ",
+                "status": "Fails"
+            }
+        ]
+    },
+        "Dodavanje licnosti":
+    {
+        "index": 10,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da doda novu licnost ",
+        "comment": "Licnost ima ime, mesto rodjenja, datum rodjenja, umetnosti kojima se bavio, period pripadanja",
+        "acceptance criteria":
+        [
+            {
+                "test": "Izbacivanje greske ukoliko takva licnost vec postoji",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske ukoliko se unese bez nekog parametra ",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je dodati licnost koja  se bavila sa vise umetnosti",
+                "status": "Fails"
+            }
+        ]
+    },
+        "Izmena licnosti":
+    {
+        "index": 11,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da izmeni podatke o postojecoj licnosti",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je obrisati postojecu licnost",
+                "status": "Fails"
+            },
+            {
+                "test": Moguce je dodati izmeniti postojece podatke o licnosti",
+                "status": "Fails"
+            }
+         
+        ]
+    },
+        "Odobravanje mogucnosti uredjivanja sadrzaja zaposlenima":
+    {
+        "index": 12,
+        "story_pts": "1",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator ima mogust odobravanja uredjivanja sadrzaja zaposlenima",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je odobriti dozvolu za uredjivanje postojecem zaposlenom",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je dodati dozvolu za uredjivanje novom zaposlenom",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je oduzeti mogucnost uredjivanja sadrzaja nekom zaposlenom",
+                "status": "Fails"
+            },
+           {
+                "test": "Izbacivanje greske ukoliko dajemo mogucnost uredjivanja nekom ko vec ima to",
+                "status": "Fails"
+            }
+        ]
+    },
+
+
+
+
+    
+
+    
+
+    
+    
 }
