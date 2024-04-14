@@ -3,7 +3,7 @@
         "Baza":
     {
         "index": 1,
-        "story_pts": "200",
+        "story_pts": "34",
         "date_created": "11. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -31,7 +31,7 @@
         "Pravljnje_naloga":
     {
         "index": 2,
-        "story_pts": "8",
+        "story_pts": "3",
         "date_created": "11. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -56,7 +56,7 @@
     "Logovanje":
     {
         "index": 3,
-        "story_pts": "X",
+        "story_pts": "3",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -81,7 +81,7 @@
     "Admin_dodavanje_rute":
     {
         "index": 4,
-        "story_pts": "X",
+        "story_pts": "5",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -110,7 +110,7 @@
     "Admin_izmena_rute":
     {
         "index": 5,
-        "story_pts": "X",
+        "story_pts": "3",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -140,7 +140,7 @@
     "Admin_dodavanje_muzeja":
     {
         "index": 6,
-        "story_pts": "X",
+        "story_pts": "3",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -171,7 +171,7 @@
         "Izmena muzeja":
     {
         "index": 7,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -195,7 +195,7 @@
         "Dodavanje perioda":
     {
         "index": 8,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -219,7 +219,7 @@
         "Izmena perioda":
     {
         "index": 9,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -247,7 +247,7 @@
         "Dodavanje licnosti":
     {
         "index": 10,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -275,7 +275,7 @@
         "Izmena licnosti":
     {
         "index": 11,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -300,7 +300,7 @@
         "Odobravanje mogucnosti uredjivanja sadrzaja zaposlenima":
     {
         "index": 12,
-        "story_pts": "1",
+        "story_pts": "8",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -332,7 +332,7 @@
 "Izmena_muzeja":
     {
         "index": 13,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -356,7 +356,7 @@
     "Dodavanje licnosti":
     {
         "index": 14,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -384,7 +384,7 @@
     "Izmena licnosti":
     {
         "index": 15,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -408,7 +408,7 @@
     "Dodavanje perioda":
     {
         "index": 16,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -436,7 +436,7 @@
     "Izmena perioda":
     {
         "index": 17,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -460,7 +460,7 @@
     "Dodavanje dela":
     {
         "index": 18,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -488,7 +488,7 @@
     "Izmena dela":
     {
         "index": 19,
-        "story_pts": "1",
+        "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -512,7 +512,7 @@
     "Generisanje_GoogleMaps_ruta":
     {
         "index": 32,
-        "story_pts": "X",
+        "story_pts": "21",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -538,7 +538,7 @@
      "Izlistavanje teksta u odnosu na zeljenu kolicinu":
     {
         "index": 23,
-        "story_pts": "1",
+        "story_pts": "5",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -568,7 +568,7 @@
     "Pretraga muzeja":
     {
         "index": 24,
-        "story_pts": "1",
+        "story_pts": "13",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -576,7 +576,7 @@
         "date_started": "None",
         "date_completed": "None",
         "story": "Korisnik ima mogućnost da pretrazuje muzeje",
-        "comment": "",
+        "comment": "Po lokaciji, epohi, nazivu i adresi. Lokacija je deo grada. Pretraga najblizi muzej po koordinatama",
         "acceptance criteria":
         [
             {
@@ -602,7 +602,7 @@
     "Pretraga licnosti":
     {
         "index": 25,
-        "story_pts": "1",
+        "story_pts": "13",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -636,7 +636,7 @@
     "Pretraga dela":
     {
         "index": 26,
-        "story_pts": "1",
+        "story_pts": "13",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -678,7 +678,7 @@
     "Pretraga epohe":
     {
         "index": 27,
-        "story_pts": "1",
+        "story_pts": "13",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -708,14 +708,14 @@
     "Cuvanje ruta":
     {
         "index": 28,
-        "story_pts": "1",
+        "story_pts": "5",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
         "assigned_to": "None",
         "date_started": "None",
         "date_completed": "None",
-        "story": "Korisnik ima mogućnost da sacuva rutu",
+        "story": "Korisnik ima mogućnost da sacuva rutu, kao omiljenu ili u neku listu",
         "comment": "",
         "acceptance criteria":
         [
@@ -724,7 +724,7 @@
                 "status": "Fails"
             },
             {
-                "test": "Moguce je izmeniti sacuvanu rutu.",
+                "test": "Moguce je isacuvati rutu u listu.",
                 "status": "Fails"
             },
             {
@@ -738,7 +738,7 @@
     "Menjanje sadasnjih i sacuvanih ruta":
     {
         "index": 29,
-        "story_pts": "1",
+        "story_pts": "8",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -767,7 +767,7 @@
     "Pravljenje rute u odnosu na period":
     {
         "index": 20,
-        "story_pts": "",
+        "story_pts": "34",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -787,7 +787,7 @@
   "Pravljenje rute u odnosu na licnost":
     {
         "index": 21,
-        "story_pts": "",
+        "story_pts": "34",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -807,7 +807,7 @@
   "Pravljenje rute u odnosu na redosled":
     {
         "index": 22,
-        "story_pts": "",
+        "story_pts": "34",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -836,7 +836,7 @@
     "Pravljenje rute vidljivom od strane korisnika":
     {
         "index": 30,
-        "story_pts": "",
+        "story_pts": "31",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
@@ -844,36 +844,29 @@
         "date_started": "None",
         "date_completed": "None",
         "story": "Korisnik moze da napravi rutu vidljivom.",
-        "comment": "",
+        "comment": "Publish uje korisnik rutu koju je on/ona uigenerisao",
         "acceptance criteria":
         [
             {
                 "test": "Moguce je pravljenje rute vidljivom od strane postojeceg korisnika.",
                 "status": "Fails"
             },
-            {
-                "test": "Postojeci korisnik moze da izabere rute napravljene od strane drugih korisnika.",
-                "status": "Fails"
-            },
-          {
-                "test": "Postojeci korisnik moze da izmeni rute napravljene od strane drugih korisnika.",
-                "status": "Fails"
-            }
+            
         ]
     },
 
     "Najpopularnije tab - lista":
     {
         "index": 31,
-        "story_pts": "",
+        "story_pts": "8",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
         "status": "TODO",
         "assigned_to": "None",
         "date_started": "None",
         "date_completed": "None",
-        "story": "Korisnik moze da napravi rutu u odnosu na redosled.",
-        "comment": "",
+        "story": "Tap sa najpopularnijim rutama.",
+        "comment": "I Administrator pravi i postavlja. II Sam program prati koje su rute koriscenje",
         "acceptance criteria":
         [
             {
