@@ -1,3 +1,9 @@
-Prvi sastanak - odrzan 15.3.2024. 
+1. sastanak - odrzan 15.3.2024. 
 Prisustvovali sastanku: Ivan Granic, Milica Cucic Topalov, Milica Bardak, Tamara Todorovic, Simona Teodorovic
-Tema (diskusija) na sastanku: razgovor kako bi projekat trebao da izgleda, razradjivanje pocetne ideje, identifikacija korisnika, pisanje ideja za funkcionalnosti koje bi spadale u korisnicke price.
+-Tema (diskusija) na sastanku: razgovor kako bi projekat trebao da izgleda, razradjivanje pocetne ideje, identifikacija korisnika, pisanje ideja za funkcionalnosti koje bi spadale u korisnicke price.
+
+
+2. Sastanak - odrzan 14.4.2024. 
+Prisustvovali sastanku: Ivan Granic, Milica Cucic Topalov, Milica Bardak, Tamara Todorovic, Simona Teodorovic
+-Tema: Story points, diskusija o tezini user sotry-ja. Izmena user story-ja i konsultovanje o njima.
+-Skala za story points: fibonacijevi brojevi od 1 do 55 
