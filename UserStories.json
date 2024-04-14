@@ -1,32 +1,4 @@
 {
-    "Story_1":
-    {
-        "index": 0,
-        "story_pts": "1",
-        "date_created": "11. Apr 2024.",
-        "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
-        "story": "Users...",
-        "comment": "comment",
-        "acceptance criteria":
-        [
-            {
-                "test": "try it with...",
-                "status": "Fails"
-            },
-            {
-                "test": "try it with...",
-                "status": "Fails"
-            },
-            {
-                "test": "try it with...",
-                "status": "Fails"
-            }
-        ]
-    },
 
         "Baza":
     {
@@ -560,7 +532,7 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
 
 
      "Izlistavanje teksta u odnosu na zeljenu kolicinu":
@@ -590,7 +562,7 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
 
 
     "Pretraga muzeja":
@@ -624,7 +596,7 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
 
 
     "Pretraga licnosti":
@@ -658,7 +630,7 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
 
 
     "Pretraga dela":
@@ -700,7 +672,7 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
 
 
     "Pretraga epohe":
@@ -730,7 +702,7 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
 
 
     "Cuvanje ruta":
@@ -760,7 +732,7 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
 
 
     "Menjanje sadasnjih i sacuvanih ruta":
@@ -790,11 +762,136 @@
                 "status": "Fails"
             }
         ]
+    }, 
+    
+    "Pravljenje rute u odnosu na period":
+    {
+        "index": 21,
+        "story_pts": "",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze da napravi rutu u odnosu na period.",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je pravljenje rute u odnosu na postojeci period.",
+                "status": "Fails"
+            }
+        ]
+    },
+  "Pravljenje rute u odnosu na licnost":
+    {
+        "index": 22,
+        "story_pts": "",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze da napravi rutu u odnosu na licnost.",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je pravljenje rute u odnosu na postojecu licnost.",
+                "status": "Fails"
+            }
+        ]
+    },
+  "Pravljenje rute u odnosu na redosled":
+    {
+        "index": 23,
+        "story_pts": "",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze da napravi rutu u odnosu na redosled.",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je pravljenje rute u odnosu na hronoloski redosled.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je pravljenje rute u odnosu na hronoloski redosled opadajuce.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je pravljenje rute tako da zahteva sto manje hoda.",
+                "status": "Fails"
+            }
+        ]
+    },
+
+    "Pravljenje rute vidljivom od strane korisnika":
+    {
+        "index": 31,
+        "story_pts": "",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze da napravi rutu vidljivom.",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je pravljenje rute vidljivom od strane postojeceg korisnika.",
+                "status": "Fails"
+            },
+            {
+                "test": "Postojeci korisnik moze da izabere rute napravljene od strane drugih korisnika.",
+                "status": "Fails"
+            },
+          {
+                "test": "Postojeci korisnik moze da izmeni rute napravljene od strane drugih korisnika.",
+                "status": "Fails"
+            }
+        ]
+    },
+
+    "Najpopularnije tab - lista":
+    {
+        "index": 32,
+        "story_pts": "",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze da napravi rutu u odnosu na redosled.",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Postojeci korisnik moze da pregleda najpopularnije rute.",
+                "status": "Fails"
+            },
+            {
+                "test": "",
+                "status": "Fails"
+            }
+        ]
     }
-    
-
-    
-
-    
-    
 }
+
+    
+
+    
+
+    
+    
+
