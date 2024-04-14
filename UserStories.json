@@ -536,6 +536,30 @@
                 "status": "Fails"
             }
         ]
+    },
+    "Generisanje_GoogleMaps_ruta":
+    {
+        "index": 33,
+        "story_pts": "X",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze da zatrazi rutu za google mape, dobija link koji se otvara u Maps aplikaciji ili na google.com/maps ako app nije dostupna",
+        "comment": "Radi se putem spajanja stringova za trazene rute. Idealno bi bilo da se koriti API za ovo, ali zbog scope-a ovog projekta nismo u mogucnosti. Ali ova promena ima visok prioritet.",
+        "acceptance criteria":
+        [
+            {
+                "test": "Pravi se ruta od jednog do drugog mesta",
+                "status": "Fails"
+            },
+            {
+                "test": "Pravi se ruta koja u sebi ima bar jedno stajaliste znaci od A preko B do C",
+                "status": "Fails"
+            }
+        ]
     }
 
 
