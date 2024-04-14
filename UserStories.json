@@ -81,6 +81,121 @@
 
         ]
     },
+    "Logovanje":
+    {
+        "index": 3,
+        "story_pts": "X",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik moze pristupi dodatnim funkcionalnostima, cuvanje ruta itd",
+        "comment": "Bitno je da moze da koristi i bez naloga",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce logovanje korisnika sa tacnim podacima",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske ako Korisnik unese pogresan parametar",
+                "status": "Fails"
+            }
+
+        ]
+    },
+    "Admin_dodavanje_rute":
+    {
+        "index": 4,
+        "story_pts": "X",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da dodaje nove predefinisane rute koje korisnici mogu birati.",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Dodavanje rute sa svim neophodnim parametrima ",
+                "status": "Fails"
+            },
+            {
+                "test": "Dodavanje rute sa svim parametrima ",
+                "status": "Fails"
+            },
+            {
+                "test": "Dodavanje rute bez parametara, da prikaze odgovrajucu gresku",
+                "status": "Fails"
+            }
+
+        ]
+    },
+    "Admin_izmena_rute":
+    {
+        "index": 5,
+        "story_pts": "X",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da predefinisane rute koje korisnici mogu birati.",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Menjanje neophodnih parametrima ",
+                "status": "Fails"
+            },
+            {
+                "test": "Menjanje parametara koji vec postoje",
+                "status": "Fails"
+            },
+            {
+                "test": "Menjanje parametara koji do sada nisu postojali tj dodavanje",
+                "status": "Fails"
+            }
+
+        ]
+    },
+
+    "Admin_dodavanje_muzeja":
+    {
+        "index": 6,
+        "story_pts": "X",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Administrator moze da dodaje nove muzeje i informacije o njima",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Dodavanje muzeja sa svim neophodnim parametrima ",
+                "status": "Fails"
+            },
+            {
+                "test": "Dodavanje muzeja sa svim parametrima ",
+                "status": "Fails"
+            },
+            {
+                "test": "Dodavanje muzeja bez parametara, da prikaze odgovrajucu gresku",
+                "status": "Fails"
+            }
+
+        ]
+    },
+
+
         "Izmena muzeja":
     {
         "index": 7,
