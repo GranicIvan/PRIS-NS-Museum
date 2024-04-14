@@ -424,7 +424,234 @@
     }
 
 
+     "Izlistavanje teksta u odnosu na zeljenu kolicinu":
+    {
+        "index": 24,
+        "story_pts": "1",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik ima mogućnost odabira dužine teksta",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguće je izlistavanje opisa male duzine.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je izlistavanje opisa srednje duzine.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je izlistavanje opisa velike duzine.",
+                "status": "Fails"
+            }
+        ]
+    }
 
+
+    "Pretraga muzeja":
+    {
+        "index": 25,
+        "story_pts": "1",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik ima mogućnost da pretrazuje muzeje",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguća je pretraga muzeja po lokaciji.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga muzeja po epohi.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga muzeja po nazivu.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga muzeja po adresi.",
+                "status": "Fails"
+            }
+        ]
+    }
+
+
+    "Pretraga licnosti":
+    {
+        "index": 26,
+        "story_pts": "1",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik ima mogućnost da pretrazuje licnosti",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguća je pretraga licnosti po imenu i prezimenu.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga licnosti po nazivima dela.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga licnosti po epohi.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga licnosti po godini rodjenja.",
+                "status": "Fails"
+            }
+        ]
+    }
+
+
+    "Pretraga dela":
+    {
+        "index": 27,
+        "story_pts": "1",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik ima mogućnost da pretrazuje dela",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguća je pretraga dela po imenu i prezimenu autora.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga dela po nazivu.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga dela po epohi.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga dela po godini nastajanja.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga dela po starosti.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga dela po vrednosti.",
+                "status": "Fails"
+            }
+        ]
+    }
+
+
+    "Pretraga epohe":
+    {
+        "index": 28,
+        "story_pts": "1",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik ima mogućnost da pretrazuje epohu koja ga zanima",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguća je pretraga epohe u odredjenom trajanju.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga epohe po vrsti umetnosti.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguca je pretraga epohe po godini pocetka.",
+                "status": "Fails"
+            }
+        ]
+    }
+
+
+    "Cuvanje ruta":
+    {
+        "index": 29,
+        "story_pts": "1",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik ima mogućnost da sacuva rutu",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguće je sacuvati rutu kao omiljenu.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je izmeniti sacuvanu rutu.",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da izmena nije uspela.",
+                "status": "Fails"
+            }
+        ]
+    }
+
+
+    "Menjanje sadasnjih i sacuvanih ruta":
+    {
+        "index": 30,
+        "story_pts": "1",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Korisnik ima mogućnost da izmeni sadasnju ili neku vec sacuvanu rutu",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguće je izmeniti bilo koju sacuvanu rutu.",
+                "status": "Fails"
+            },
+            {
+                "test": "Moguce je izmeniti sadasnju rutu.",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da izmena nije uspela.",
+                "status": "Fails"
+            }
+        ]
+    }
     
 
     
