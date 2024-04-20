@@ -5,5 +5,5 @@ Prisustvovali sastanku: Ivan Granic, Milica Cucic Topalov, Milica Bardak, Tamara
 
 2. Sastanak - odrzan 14.4.2024. 
 Prisustvovali sastanku: Ivan Granic, Milica Cucic Topalov, Milica Bardak, Tamara Todorovic, Simona Teodorovic
--Tema: Story points, diskusija o tezini user sotry-ja. Izmena user story-ja i konsultovanje o njima.
+-Tema: Story points, diskusija o tezini user story-ja. Izmena user story-ja i konsultovanje o njima.
 -Skala za story points: fibonacijevi brojevi od 1 do 55 
