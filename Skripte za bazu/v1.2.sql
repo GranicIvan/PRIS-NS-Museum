@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema PRIS3
+-- Schema sql11699822
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema PRIS3
+-- Schema sql11699822
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `PRIS3` DEFAULT CHARACTER SET utf8 ;
-USE `PRIS3` ;
+CREATE SCHEMA IF NOT EXISTS `sql11699822` DEFAULT CHARACTER SET utf8 ;
+USE `sql11699822` ;
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Period`
+-- Table `sql11699822`.`Period`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Period` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Period` (
   `idPERIOD` INT NOT NULL AUTO_INCREMENT,
   `Naziv` VARCHAR(45) NULL,
   `Pocetak_perioda` INT NULL,
@@ -33,9 +33,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Licnost`
+-- Table `sql11699822`.`Licnost`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Licnost` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Licnost` (
   `idLicnost` INT NOT NULL AUTO_INCREMENT,
   `Ime` VARCHAR(45) NULL,
   `Prezime` VARCHAR(45) NULL,
@@ -47,16 +47,16 @@ CREATE TABLE IF NOT EXISTS `PRIS3`.`Licnost` (
   INDEX `fk_Licnost_Period_idx` (`Period_idPERIOD` ASC) VISIBLE,
   CONSTRAINT `fk_Licnost_Period`
     FOREIGN KEY (`Period_idPERIOD`)
-    REFERENCES `PRIS3`.`Period` (`idPERIOD`)
+    REFERENCES `sql11699822`.`Period` (`idPERIOD`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Umetnost`
+-- Table `sql11699822`.`Umetnost`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Umetnost` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Umetnost` (
   `idUmetnost` INT NOT NULL AUTO_INCREMENT,
   `Naziv` VARCHAR(45) NULL,
   `Opis` VARCHAR(45) NULL,
@@ -65,9 +65,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Muzej`
+-- Table `sql11699822`.`Muzej`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Muzej` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Muzej` (
   `idPERIOD` INT NOT NULL AUTO_INCREMENT,
   `Naziv` VARCHAR(45) NULL,
   `TXT0` TEXT(3000) NULL,
@@ -83,9 +83,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Delo`
+-- Table `sql11699822`.`Delo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Delo` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Delo` (
   `idPERIOD` INT NOT NULL AUTO_INCREMENT,
   `Naziv` VARCHAR(45) NULL,
   `TXT0` TEXT(3000) NULL,
@@ -100,21 +100,21 @@ CREATE TABLE IF NOT EXISTS `PRIS3`.`Delo` (
   INDEX `fk_Delo_Licnost1_idx` (`Licnost_idLicnost` ASC) VISIBLE,
   CONSTRAINT `fk_Delo_Period1`
     FOREIGN KEY (`Period_idPERIOD`)
-    REFERENCES `PRIS3`.`Period` (`idPERIOD`)
+    REFERENCES `sql11699822`.`Period` (`idPERIOD`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Delo_Licnost1`
     FOREIGN KEY (`Licnost_idLicnost`)
-    REFERENCES `PRIS3`.`Licnost` (`idLicnost`)
+    REFERENCES `sql11699822`.`Licnost` (`idLicnost`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Korisnik`
+-- Table `sql11699822`.`Korisnik`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Korisnik` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Korisnik` (
   `idKorisnik` INT NOT NULL AUTO_INCREMENT,
   `Ime` VARCHAR(45) NOT NULL,
   `Prezime` VARCHAR(45) NULL,
@@ -127,9 +127,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Ruta`
+-- Table `sql11699822`.`Ruta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Ruta` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Ruta` (
   `idRuta` INT NOT NULL AUTO_INCREMENT,
   `Ime_Rute` VARCHAR(45) NULL,
   `Opis` VARCHAR(45) NULL,
@@ -139,16 +139,16 @@ CREATE TABLE IF NOT EXISTS `PRIS3`.`Ruta` (
   INDEX `fk_Ruta_Korisnik1_idx` (`Korisnik_idKorisnik` ASC) VISIBLE,
   CONSTRAINT `fk_Ruta_Korisnik1`
     FOREIGN KEY (`Korisnik_idKorisnik`)
-    REFERENCES `PRIS3`.`Korisnik` (`idKorisnik`)
+    REFERENCES `sql11699822`.`Korisnik` (`idKorisnik`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Muzej_has_Period`
+-- Table `sql11699822`.`Muzej_has_Period`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Muzej_has_Period` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Muzej_has_Period` (
   `Muzej_idPERIOD` INT NOT NULL,
   `Period_idPERIOD` INT NOT NULL,
   PRIMARY KEY (`Muzej_idPERIOD`, `Period_idPERIOD`),
@@ -156,21 +156,21 @@ CREATE TABLE IF NOT EXISTS `PRIS3`.`Muzej_has_Period` (
   INDEX `fk_Muzej_has_Period_Muzej1_idx` (`Muzej_idPERIOD` ASC) VISIBLE,
   CONSTRAINT `fk_Muzej_has_Period_Muzej1`
     FOREIGN KEY (`Muzej_idPERIOD`)
-    REFERENCES `PRIS3`.`Muzej` (`idPERIOD`)
+    REFERENCES `sql11699822`.`Muzej` (`idPERIOD`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Muzej_has_Period_Period1`
     FOREIGN KEY (`Period_idPERIOD`)
-    REFERENCES `PRIS3`.`Period` (`idPERIOD`)
+    REFERENCES `sql11699822`.`Period` (`idPERIOD`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Licnost_did_Umetnost`
+-- Table `sql11699822`.`Licnost_did_Umetnost`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Licnost_did_Umetnost` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Licnost_did_Umetnost` (
   `Licnost_idLicnost` INT NOT NULL,
   `Umetnost_idUmetnost` INT NOT NULL,
   PRIMARY KEY (`Licnost_idLicnost`, `Umetnost_idUmetnost`),
@@ -178,21 +178,21 @@ CREATE TABLE IF NOT EXISTS `PRIS3`.`Licnost_did_Umetnost` (
   INDEX `fk_Licnost_has_Umetnost_Licnost1_idx` (`Licnost_idLicnost` ASC) VISIBLE,
   CONSTRAINT `fk_Licnost_has_Umetnost_Licnost1`
     FOREIGN KEY (`Licnost_idLicnost`)
-    REFERENCES `PRIS3`.`Licnost` (`idLicnost`)
+    REFERENCES `sql11699822`.`Licnost` (`idLicnost`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Licnost_has_Umetnost_Umetnost1`
     FOREIGN KEY (`Umetnost_idUmetnost`)
-    REFERENCES `PRIS3`.`Umetnost` (`idUmetnost`)
+    REFERENCES `sql11699822`.`Umetnost` (`idUmetnost`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Ruta_has_Muzej`
+-- Table `sql11699822`.`Ruta_has_Muzej`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Ruta_has_Muzej` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Ruta_has_Muzej` (
   `Ruta_idRuta` INT NOT NULL,
   `Muzej_idPERIOD` INT NOT NULL,
   PRIMARY KEY (`Ruta_idRuta`, `Muzej_idPERIOD`),
@@ -200,21 +200,21 @@ CREATE TABLE IF NOT EXISTS `PRIS3`.`Ruta_has_Muzej` (
   INDEX `fk_Ruta_has_Muzej_Ruta1_idx` (`Ruta_idRuta` ASC) VISIBLE,
   CONSTRAINT `fk_Ruta_has_Muzej_Ruta1`
     FOREIGN KEY (`Ruta_idRuta`)
-    REFERENCES `PRIS3`.`Ruta` (`idRuta`)
+    REFERENCES `sql11699822`.`Ruta` (`idRuta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Ruta_has_Muzej_Muzej1`
     FOREIGN KEY (`Muzej_idPERIOD`)
-    REFERENCES `PRIS3`.`Muzej` (`idPERIOD`)
+    REFERENCES `sql11699822`.`Muzej` (`idPERIOD`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PRIS3`.`Korisnik_has_Ruta`
+-- Table `sql11699822`.`Korisnik_has_Ruta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PRIS3`.`Korisnik_has_Ruta` (
+CREATE TABLE IF NOT EXISTS `sql11699822`.`Korisnik_has_Ruta` (
   `Korisnik_idKorisnik` INT NOT NULL,
   `Ruta_idRuta` INT NOT NULL,
   PRIMARY KEY (`Korisnik_idKorisnik`, `Ruta_idRuta`),
@@ -222,12 +222,12 @@ CREATE TABLE IF NOT EXISTS `PRIS3`.`Korisnik_has_Ruta` (
   INDEX `fk_Korisnik_has_Ruta_Korisnik1_idx` (`Korisnik_idKorisnik` ASC) VISIBLE,
   CONSTRAINT `fk_Korisnik_has_Ruta_Korisnik1`
     FOREIGN KEY (`Korisnik_idKorisnik`)
-    REFERENCES `PRIS3`.`Korisnik` (`idKorisnik`)
+    REFERENCES `sql11699822`.`Korisnik` (`idKorisnik`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Korisnik_has_Ruta_Ruta1`
     FOREIGN KEY (`Ruta_idRuta`)
-    REFERENCES `PRIS3`.`Ruta` (`idRuta`)
+    REFERENCES `sql11699822`.`Ruta` (`idRuta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
