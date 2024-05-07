@@ -1,33 +1,6 @@
 {
 
-        "Baza":
-    {
-        "index": 1,
-        "story_pts": "50",
-        "date_created": "11. Apr 2024.",
-        "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
-        "story": "Pravljenje MongoDB baze, naloga i svih potrebnih stavki",
-        "comment": "Baza ce sadrzati pdoatke o periodima, znamenitim ljudima, mestima/muzeijima/znamenitostima, delima, korisnicima, rutama",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguce dodavanje u sve 'tabele' ",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguce citanje iz svih 'tabela'",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguce menjanje svih 'tabela'",
-                "status": "Fails"
-            }
-        ]
-    },
+        
         "Pravljnje_naloga":
     {
         "index": 2,
@@ -878,7 +851,79 @@
                 "status": "Fails"
             }
         ]
-    }
+    },
+
+    "Osmisljavanje_baze":
+    {
+        "index": 32,
+        "story_pts": "3",
+        "date_created": "11. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Osmisljavanje baze u MySQL",
+        "comment": "Baza ce sadrzati pdoatke o periodima, znamenitim ljudima, mestima/muzeijima/znamenitostima, delima, korisnicima, rutama",
+        "acceptance criteria":
+        [
+            {
+                "test": "Baza je osmisljena ",
+                "status": "Passes"
+            }
+        ]
+    },
+
+    "Dizajniranje_baze_u_Workbench":
+    {
+        "index":33,
+        "story_pts": "5",
+        "date_created": "11. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Dizajniranje",
+        "comment": "Baza ce sadrzati pdoatke o periodima, znamenitim ljudima, mestima/muzeijima/znamenitostima, delima, korisnicima, rutama",
+        "acceptance criteria":
+        [
+            {
+                "test": "Dizajnirano ",
+                "status": "Passes"
+            }
+        ]
+    },
+
+    "Pravljenje_baze_na_cloud-u":
+    {
+        "index": 34,
+        "story_pts": "3",
+        "date_created": "7. May 2024.",
+        "part_ofSprint": "None",
+        "status": "TODO",
+        "assigned_to": "None",
+        "date_started": "None",
+        "date_completed": "None",
+        "story": "Pravljenje SQL skripte i pokretanje na bazi na cloud u",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce je pristupiti bazi iz Wokrbench-a",
+                "status": "Passes"
+            },
+            {
+                "test": "Moguce je pristupiti bazi preko browsera-a",
+                "status": "Passes"
+            },
+            {
+                "test": "Moguce uvodjenje podataka u eclipse",
+                "status": "Passes"
+            }
+        ]
+    },
+
 }
 
     
