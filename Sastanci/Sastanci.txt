@@ -12,3 +12,7 @@ Prisustvovali sastanku: Ivan Granic, Milica Cucic Topalov, Milica Bardak, Tamara
 3. Sastanak - odrzan 21.4.2024.
 Prisustvovali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara Todorovic, Milica Cucic Topalov - opravdano odsutna
 -Tema: Planiranje sprinta, podela user story-ja po clanovima tima.
+
+4. sastanak - odrzan 23.7.2024.
+Prisustvali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara Todorovic, Milica Cucic Topalov
+-Tema: Namestanje problema sa bazom, podela crud operacija po tabelama koje imamo u bazi, dogovor oko narednog sprint review-a, dogovor za sledeci sastanak
