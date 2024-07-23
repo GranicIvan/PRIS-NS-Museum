@@ -1,10 +1,13 @@
 package com.example.demo.control;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,25 +19,41 @@ import com.example.demo.repo.LicnostRepo;
 @RestController
 @RequestMapping("/licnost")
 public class LicnostController {
-	
-	@Autowired LicnostRepo lr;
-	
+
+	@Autowired
+	LicnostRepo lr;
+
 	@PostMapping
-    public ResponseEntity<String> createLicnost(@RequestBody Licnost licnost) {
-        // Check for required parameters
-        if (licnost.getIme() == null || licnost.getPrezime() == null) {
-            return new ResponseEntity<>("Ime and Prezime are required.", HttpStatus.BAD_REQUEST);
-        }
+	public ResponseEntity<String> createLicnost(@RequestBody Licnost licnost) {
+		// Check for required parameters
+		if (licnost.getIme() == null || licnost.getPrezime() == null) {
+			return new ResponseEntity<>("Ime and Prezime are required.", HttpStatus.BAD_REQUEST);
+		}
 
-        // Check if the licnost already exists
-        Optional<Licnost> existingLicnost = lr.findByImeAndPrezime(licnost.getIme(), licnost.getPrezime());
-        if (existingLicnost.isPresent()) {
-            return new ResponseEntity<>("Licnost already exists.", HttpStatus.CONFLICT);
-        }
+		// Check if the licnost already exists
+		Optional<Licnost> existingLicnost = lr.findByImeAndPrezime(licnost.getIme(), licnost.getPrezime());
+		if (existingLicnost.isPresent()) {
+			return new ResponseEntity<>("Licnost already exists.", HttpStatus.CONFLICT);
+		}
 
-        // Save the new licnost
-        lr.save(licnost);
-        return new ResponseEntity<>("Licnost created successfully.", HttpStatus.CREATED);
+		// Save the new licnost
+		lr.save(licnost);
+		return new ResponseEntity<>("Licnost created successfully.", HttpStatus.CREATED);
+	}
+
+	@GetMapping
+	public List<Licnost> getAllLicnosti() {
+		return lr.findAll();
+	}
+	
+	@GetMapping("/{id}")
+    public ResponseEntity<Licnost> getLicnostById(@PathVariable Integer id) {
+        Optional<Licnost> licnost = lr.findById(id);
+        if (licnost.isPresent()) {
+            return ResponseEntity.ok(licnost.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }
