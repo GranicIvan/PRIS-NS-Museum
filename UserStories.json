@@ -1,6 +1,4 @@
-{
-
-        
+{ 
         "Pravljnje_naloga":
     {
         "index": 2,
@@ -140,8 +138,7 @@
         ]
     },
 
-
-        "Izmena muzeja":
+    "Izmena muzeja":
     {
         "index": 7,
         "story_pts": "2",
@@ -302,7 +299,7 @@
             }
         ]
     },
-"Izmena_muzeja":
+    "Izmena_muzeja":
     {
         "index": 13,
         "story_pts": "2",
@@ -507,8 +504,7 @@
         ]
     },
 
-
-     "Izlistavanje teksta u odnosu na zeljenu kolicinu":
+    "Izlistavanje teksta u odnosu na zeljenu kolicinu":
     {
         "index": 23,
         "story_pts": "5",
@@ -536,8 +532,6 @@
             }
         ]
     },
-
-
     "Pretraga muzeja":
     {
         "index": 24,
@@ -571,7 +565,6 @@
         ]
     },
 
-
     "Pretraga licnosti":
     {
         "index": 25,
@@ -604,7 +597,6 @@
             }
         ]
     },
-
 
     "Pretraga dela":
     {
@@ -647,7 +639,6 @@
         ]
     },
 
-
     "Pretraga epohe":
     {
         "index": 27,
@@ -677,7 +668,6 @@
         ]
     },
 
-
     "Cuvanje ruta":
     {
         "index": 28,
@@ -706,7 +696,6 @@
             }
         ]
     },
-
 
     "Menjanje sadasnjih i sacuvanih ruta":
     {
@@ -757,7 +746,7 @@
             }
         ]
     },
-  "Pravljenje rute u odnosu na licnost":
+    "Pravljenje rute u odnosu na licnost":
     {
         "index": 21,
         "story_pts": "34",
@@ -777,7 +766,7 @@
             }
         ]
     },
-  "Pravljenje rute u odnosu na redosled":
+    "Pravljenje rute u odnosu na redosled":
     {
         "index": 22,
         "story_pts": "34",
