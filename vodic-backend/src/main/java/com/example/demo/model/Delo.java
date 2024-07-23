@@ -1,20 +1,11 @@
 package com.example.demo.model;
 
 import java.io.Serializable;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Lob;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.NamedQuery;
+import jakarta.persistence.*;
 
 
 /**
- * The persistent class for the Delo database table.
+ * The persistent class for the delo database table.
  * 
  */
 @Entity
@@ -26,36 +17,33 @@ public class Delo implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPERIOD;
 
-	@Column(name="Godina_nastanka")
-	private String godina_nastanka;
+	@Column(name="godina_nastanka")
+	private String godinaNastanka;
 
-	@Column(name="Kratki_opis")
-	private String kratki_opis;
+	@Column(name="kratki_opis")
+	private String kratkiOpis;
 
-	@Column(name="Naziv")
+	@Column(name="licnost_id_licnost")
+	private int licnostIdLicnost;
+
 	private String naziv;
 
 	@Lob
-	@Column(name="TXT0")
 	private String txt0;
 
 	@Lob
-	@Column(name="TXT1")
 	private String txt1;
 
 	@Lob
-	@Column(name="TXT2")
 	private String txt2;
-
-	//bi-directional many-to-one association to Period
-	@ManyToOne
-	@JoinColumn(name="Period_idPERIOD")
-	private Period period;
 
 	//bi-directional many-to-one association to Licnost
 	@ManyToOne
-	@JoinColumn(name="Licnost_idLicnost")
 	private Licnost licnost;
+
+	//bi-directional many-to-one association to Period
+	@ManyToOne
+	private Period period;
 
 	public Delo() {
 	}
@@ -68,20 +56,28 @@ public class Delo implements Serializable {
 		this.idPERIOD = idPERIOD;
 	}
 
-	public String getGodina_nastanka() {
-		return this.godina_nastanka;
+	public String getGodinaNastanka() {
+		return this.godinaNastanka;
 	}
 
-	public void setGodina_nastanka(String godina_nastanka) {
-		this.godina_nastanka = godina_nastanka;
+	public void setGodinaNastanka(String godinaNastanka) {
+		this.godinaNastanka = godinaNastanka;
 	}
 
-	public String getKratki_opis() {
-		return this.kratki_opis;
+	public String getKratkiOpis() {
+		return this.kratkiOpis;
 	}
 
-	public void setKratki_opis(String kratki_opis) {
-		this.kratki_opis = kratki_opis;
+	public void setKratkiOpis(String kratkiOpis) {
+		this.kratkiOpis = kratkiOpis;
+	}
+
+	public int getLicnostIdLicnost() {
+		return this.licnostIdLicnost;
+	}
+
+	public void setLicnostIdLicnost(int licnostIdLicnost) {
+		this.licnostIdLicnost = licnostIdLicnost;
 	}
 
 	public String getNaziv() {
@@ -116,20 +112,20 @@ public class Delo implements Serializable {
 		this.txt2 = txt2;
 	}
 
-	public Period getPeriod() {
-		return this.period;
-	}
-
-	public void setPeriod(Period period) {
-		this.period = period;
-	}
-
 	public Licnost getLicnost() {
 		return this.licnost;
 	}
 
 	public void setLicnost(Licnost licnost) {
 		this.licnost = licnost;
+	}
+
+	public Period getPeriod() {
+		return this.period;
+	}
+
+	public void setPeriod(Period period) {
+		this.period = period;
 	}
 
 }

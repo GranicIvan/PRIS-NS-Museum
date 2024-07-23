@@ -1,23 +1,12 @@
 package com.example.demo.model;
 
 import java.io.Serializable;
+import jakarta.persistence.*;
 import java.util.List;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.Lob;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.NamedQuery;
-import jakarta.persistence.OneToMany;
 
 
 /**
- * The persistent class for the Period database table.
+ * The persistent class for the period database table.
  * 
  */
 @Entity
@@ -29,25 +18,19 @@ public class Period implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPERIOD;
 
-	@Column(name="Kraj_perioda")
 	private int kraj_perioda;
 
-	@Column(name="Naziv")
 	private String naziv;
 
-	@Column(name="Pocetak_perioda")
 	private int pocetak_perioda;
 
 	@Lob
-	@Column(name="TXT0")
 	private String txt0;
 
 	@Lob
-	@Column(name="TXT1")
 	private String txt1;
 
 	@Lob
-	@Column(name="TXT2")
 	private String txt2;
 
 	//bi-directional many-to-one association to Delo
@@ -61,7 +44,7 @@ public class Period implements Serializable {
 	//bi-directional many-to-many association to Muzej
 	@ManyToMany
 	@JoinTable(
-		name="Muzej_has_Period"
+		name="muzej_has_period"
 		, joinColumns={
 			@JoinColumn(name="Period_idPERIOD")
 			}

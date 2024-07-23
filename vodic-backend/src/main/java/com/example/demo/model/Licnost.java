@@ -1,22 +1,12 @@
 package com.example.demo.model;
 
 import java.io.Serializable;
+import jakarta.persistence.*;
 import java.util.List;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.NamedQuery;
-import jakarta.persistence.OneToMany;
 
 
 /**
- * The persistent class for the Licnost database table.
+ * The persistent class for the licnost database table.
  * 
  */
 @Entity
@@ -28,19 +18,17 @@ public class Licnost implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idLicnost;
 
-	@Column(name="Godina_rodjenja")
-	private String godina_rodjenja;
+	@Column(name="godina_rodjenja")
+	private String godinaRodjenja;
 
-	@Column(name="Godina_smrti")
-	private String godina_smrti;
+	@Column(name="godina_smrti")
+	private String godinaSmrti;
 
-	@Column(name="Ime")
 	private String ime;
 
-	@Column(name="Mesto_rodjenja")
-	private String mesto_rodjenja;
+	@Column(name="mesto_rodjenja")
+	private String mestoRodjenja;
 
-	@Column(name="Prezime")
 	private String prezime;
 
 	//bi-directional many-to-one association to Delo
@@ -49,12 +37,11 @@ public class Licnost implements Serializable {
 
 	//bi-directional many-to-one association to Period
 	@ManyToOne
-	@JoinColumn(name="Period_idPERIOD")
 	private Period period;
 
-	//bi-directional many-to-many association to Umetnost
-	@ManyToMany(mappedBy="licnosts")
-	private List<Umetnost> umetnosts;
+	//bi-directional many-to-one association to LicnostDidUmetnost
+	@OneToMany(mappedBy="licnost")
+	private List<LicnostDidUmetnost> licnostDidUmetnosts;
 
 	public Licnost() {
 	}
@@ -67,20 +54,20 @@ public class Licnost implements Serializable {
 		this.idLicnost = idLicnost;
 	}
 
-	public String getGodina_rodjenja() {
-		return this.godina_rodjenja;
+	public String getGodinaRodjenja() {
+		return this.godinaRodjenja;
 	}
 
-	public void setGodina_rodjenja(String godina_rodjenja) {
-		this.godina_rodjenja = godina_rodjenja;
+	public void setGodinaRodjenja(String godinaRodjenja) {
+		this.godinaRodjenja = godinaRodjenja;
 	}
 
-	public String getGodina_smrti() {
-		return this.godina_smrti;
+	public String getGodinaSmrti() {
+		return this.godinaSmrti;
 	}
 
-	public void setGodina_smrti(String godina_smrti) {
-		this.godina_smrti = godina_smrti;
+	public void setGodinaSmrti(String godinaSmrti) {
+		this.godinaSmrti = godinaSmrti;
 	}
 
 	public String getIme() {
@@ -91,12 +78,12 @@ public class Licnost implements Serializable {
 		this.ime = ime;
 	}
 
-	public String getMesto_rodjenja() {
-		return this.mesto_rodjenja;
+	public String getMestoRodjenja() {
+		return this.mestoRodjenja;
 	}
 
-	public void setMesto_rodjenja(String mesto_rodjenja) {
-		this.mesto_rodjenja = mesto_rodjenja;
+	public void setMestoRodjenja(String mestoRodjenja) {
+		this.mestoRodjenja = mestoRodjenja;
 	}
 
 	public String getPrezime() {
@@ -137,12 +124,26 @@ public class Licnost implements Serializable {
 		this.period = period;
 	}
 
-	public List<Umetnost> getUmetnosts() {
-		return this.umetnosts;
+	public List<LicnostDidUmetnost> getLicnostDidUmetnosts() {
+		return this.licnostDidUmetnosts;
 	}
 
-	public void setUmetnosts(List<Umetnost> umetnosts) {
-		this.umetnosts = umetnosts;
+	public void setLicnostDidUmetnosts(List<LicnostDidUmetnost> licnostDidUmetnosts) {
+		this.licnostDidUmetnosts = licnostDidUmetnosts;
+	}
+
+	public LicnostDidUmetnost addLicnostDidUmetnost(LicnostDidUmetnost licnostDidUmetnost) {
+		getLicnostDidUmetnosts().add(licnostDidUmetnost);
+		licnostDidUmetnost.setLicnost(this);
+
+		return licnostDidUmetnost;
+	}
+
+	public LicnostDidUmetnost removeLicnostDidUmetnost(LicnostDidUmetnost licnostDidUmetnost) {
+		getLicnostDidUmetnosts().remove(licnostDidUmetnost);
+		licnostDidUmetnost.setLicnost(null);
+
+		return licnostDidUmetnost;
 	}
 
 }

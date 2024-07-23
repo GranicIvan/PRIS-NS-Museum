@@ -1,22 +1,12 @@
 package com.example.demo.model;
 
 import java.io.Serializable;
+import jakarta.persistence.*;
 import java.util.List;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.Lob;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.NamedQuery;
 
 
 /**
- * The persistent class for the Muzej database table.
+ * The persistent class for the muzej database table.
  * 
  */
 @Entity
@@ -28,52 +18,37 @@ public class Muzej implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPERIOD;
 
-	@Column(name="Adresa")
 	private String adresa;
 
-	@Column(name="Koordinate")
 	private String koordinate;
 
-	@Column(name="Kratak_opis")
-	private String kratak_opis;
+	@Column(name="kratak_opis")
+	private String kratakOpis;
 
-	@Column(name="Maps_deo_za_link")
-	private String maps_deo_za_link;
+	@Column(name="maps_deo_za_link")
+	private String mapsDeoZaLink;
 
-	@Column(name="Maps_link")
-	private String maps_link;
+	@Column(name="maps_link")
+	private String mapsLink;
 
-	@Column(name="Naziv")
 	private String naziv;
 
 	@Lob
-	@Column(name="TXT0")
 	private String txt0;
 
 	@Lob
-	@Column(name="TXT1")
 	private String txt1;
 
 	@Lob
-	@Column(name="TXT2")
 	private String txt2;
 
 	//bi-directional many-to-many association to Period
 	@ManyToMany(mappedBy="muzejs")
 	private List<Period> periods;
 
-	//bi-directional many-to-many association to Ruta
-	@ManyToMany
-	@JoinTable(
-		name="Ruta_has_Muzej"
-		, joinColumns={
-			@JoinColumn(name="Muzej_idPERIOD")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="Ruta_idRuta")
-			}
-		)
-	private List<Ruta> rutas;
+	//bi-directional many-to-one association to RutaHasMuzej
+	@OneToMany(mappedBy="muzej")
+	private List<RutaHasMuzej> rutaHasMuzejs;
 
 	public Muzej() {
 	}
@@ -102,28 +77,28 @@ public class Muzej implements Serializable {
 		this.koordinate = koordinate;
 	}
 
-	public String getKratak_opis() {
-		return this.kratak_opis;
+	public String getKratakOpis() {
+		return this.kratakOpis;
 	}
 
-	public void setKratak_opis(String kratak_opis) {
-		this.kratak_opis = kratak_opis;
+	public void setKratakOpis(String kratakOpis) {
+		this.kratakOpis = kratakOpis;
 	}
 
-	public String getMaps_deo_za_link() {
-		return this.maps_deo_za_link;
+	public String getMapsDeoZaLink() {
+		return this.mapsDeoZaLink;
 	}
 
-	public void setMaps_deo_za_link(String maps_deo_za_link) {
-		this.maps_deo_za_link = maps_deo_za_link;
+	public void setMapsDeoZaLink(String mapsDeoZaLink) {
+		this.mapsDeoZaLink = mapsDeoZaLink;
 	}
 
-	public String getMaps_link() {
-		return this.maps_link;
+	public String getMapsLink() {
+		return this.mapsLink;
 	}
 
-	public void setMaps_link(String maps_link) {
-		this.maps_link = maps_link;
+	public void setMapsLink(String mapsLink) {
+		this.mapsLink = mapsLink;
 	}
 
 	public String getNaziv() {
@@ -166,12 +141,26 @@ public class Muzej implements Serializable {
 		this.periods = periods;
 	}
 
-	public List<Ruta> getRutas() {
-		return this.rutas;
+	public List<RutaHasMuzej> getRutaHasMuzejs() {
+		return this.rutaHasMuzejs;
 	}
 
-	public void setRutas(List<Ruta> rutas) {
-		this.rutas = rutas;
+	public void setRutaHasMuzejs(List<RutaHasMuzej> rutaHasMuzejs) {
+		this.rutaHasMuzejs = rutaHasMuzejs;
+	}
+
+	public RutaHasMuzej addRutaHasMuzej(RutaHasMuzej rutaHasMuzej) {
+		getRutaHasMuzejs().add(rutaHasMuzej);
+		rutaHasMuzej.setMuzej(this);
+
+		return rutaHasMuzej;
+	}
+
+	public RutaHasMuzej removeRutaHasMuzej(RutaHasMuzej rutaHasMuzej) {
+		getRutaHasMuzejs().remove(rutaHasMuzej);
+		rutaHasMuzej.setMuzej(null);
+
+		return rutaHasMuzej;
 	}
 
 }

@@ -1,20 +1,12 @@
 package com.example.demo.model;
 
 import java.io.Serializable;
+import jakarta.persistence.*;
 import java.util.List;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.NamedQuery;
-import jakarta.persistence.OneToMany;
 
 
 /**
- * The persistent class for the Korisnik database table.
+ * The persistent class for the korisnik database table.
  * 
  */
 @Entity
@@ -26,31 +18,25 @@ public class Korisnik implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idKorisnik;
 
-	@Column(name="Email")
 	private String email;
 
-	@Column(name="Ime")
 	private String ime;
 
-	@Column(name="Password")
 	private String password;
 
-	@Column(name="Preference")
 	private String preference;
 
-	@Column(name="Prezime")
 	private String prezime;
 
-	@Column(name="Salt")
 	private String salt;
 
-	//bi-directional many-to-many association to Ruta
-	@ManyToMany(mappedBy="korisniks")
-	private List<Ruta> rutas1;
+	//bi-directional many-to-one association to KorisnikHasRuta
+	@OneToMany(mappedBy="korisnik")
+	private List<KorisnikHasRuta> korisnikHasRutas;
 
 	//bi-directional many-to-one association to Ruta
 	@OneToMany(mappedBy="korisnik")
-	private List<Ruta> rutas2;
+	private List<Ruta> rutas;
 
 	public Korisnik() {
 	}
@@ -111,34 +97,48 @@ public class Korisnik implements Serializable {
 		this.salt = salt;
 	}
 
-	public List<Ruta> getRutas1() {
-		return this.rutas1;
+	public List<KorisnikHasRuta> getKorisnikHasRutas() {
+		return this.korisnikHasRutas;
 	}
 
-	public void setRutas1(List<Ruta> rutas1) {
-		this.rutas1 = rutas1;
+	public void setKorisnikHasRutas(List<KorisnikHasRuta> korisnikHasRutas) {
+		this.korisnikHasRutas = korisnikHasRutas;
 	}
 
-	public List<Ruta> getRutas2() {
-		return this.rutas2;
+	public KorisnikHasRuta addKorisnikHasRuta(KorisnikHasRuta korisnikHasRuta) {
+		getKorisnikHasRutas().add(korisnikHasRuta);
+		korisnikHasRuta.setKorisnik(this);
+
+		return korisnikHasRuta;
 	}
 
-	public void setRutas2(List<Ruta> rutas2) {
-		this.rutas2 = rutas2;
+	public KorisnikHasRuta removeKorisnikHasRuta(KorisnikHasRuta korisnikHasRuta) {
+		getKorisnikHasRutas().remove(korisnikHasRuta);
+		korisnikHasRuta.setKorisnik(null);
+
+		return korisnikHasRuta;
 	}
 
-	public Ruta addRutas2(Ruta rutas2) {
-		getRutas2().add(rutas2);
-		rutas2.setKorisnik(this);
-
-		return rutas2;
+	public List<Ruta> getRutas() {
+		return this.rutas;
 	}
 
-	public Ruta removeRutas2(Ruta rutas2) {
-		getRutas2().remove(rutas2);
-		rutas2.setKorisnik(null);
+	public void setRutas(List<Ruta> rutas) {
+		this.rutas = rutas;
+	}
 
-		return rutas2;
+	public Ruta addRuta(Ruta ruta) {
+		getRutas().add(ruta);
+		ruta.setKorisnik(this);
+
+		return ruta;
+	}
+
+	public Ruta removeRuta(Ruta ruta) {
+		getRutas().remove(ruta);
+		ruta.setKorisnik(null);
+
+		return ruta;
 	}
 
 }

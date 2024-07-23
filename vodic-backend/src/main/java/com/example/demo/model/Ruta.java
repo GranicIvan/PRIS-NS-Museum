@@ -1,23 +1,12 @@
 package com.example.demo.model;
 
 import java.io.Serializable;
+import jakarta.persistence.*;
 import java.util.List;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.Lob;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.NamedQuery;
 
 
 /**
- * The persistent class for the Ruta database table.
+ * The persistent class for the ruta database table.
  * 
  */
 @Entity
@@ -29,37 +18,28 @@ public class Ruta implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idRuta;
 
-	@Column(name="Ime_Rute")
-	private String ime_Rute;
+	@Column(name="ime_rute")
+	private String imeRute;
 
-	@Column(name="Opis")
+	@Column(name="korisnik_id_korisnik")
+	private int korisnikIdKorisnik;
+
 	private String opis;
 
 	@Lob
-	@Column(name="Stanice")
 	private String stanice;
 
-	//bi-directional many-to-many association to Korisnik
-	@ManyToMany
-	@JoinTable(
-		name="Korisnik_has_Ruta"
-		, joinColumns={
-			@JoinColumn(name="Ruta_idRuta")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="Korisnik_idKorisnik")
-			}
-		)
-	private List<Korisnik> korisniks;
+	//bi-directional many-to-one association to KorisnikHasRuta
+	@OneToMany(mappedBy="ruta")
+	private List<KorisnikHasRuta> korisnikHasRutas;
 
 	//bi-directional many-to-one association to Korisnik
 	@ManyToOne
-	@JoinColumn(name="Korisnik_idKorisnik")
 	private Korisnik korisnik;
 
-	//bi-directional many-to-many association to Muzej
-	@ManyToMany(mappedBy="rutas")
-	private List<Muzej> muzejs;
+	//bi-directional many-to-one association to RutaHasMuzej
+	@OneToMany(mappedBy="ruta")
+	private List<RutaHasMuzej> rutaHasMuzejs;
 
 	public Ruta() {
 	}
@@ -72,12 +52,20 @@ public class Ruta implements Serializable {
 		this.idRuta = idRuta;
 	}
 
-	public String getIme_Rute() {
-		return this.ime_Rute;
+	public String getImeRute() {
+		return this.imeRute;
 	}
 
-	public void setIme_Rute(String ime_Rute) {
-		this.ime_Rute = ime_Rute;
+	public void setImeRute(String imeRute) {
+		this.imeRute = imeRute;
+	}
+
+	public int getKorisnikIdKorisnik() {
+		return this.korisnikIdKorisnik;
+	}
+
+	public void setKorisnikIdKorisnik(int korisnikIdKorisnik) {
+		this.korisnikIdKorisnik = korisnikIdKorisnik;
 	}
 
 	public String getOpis() {
@@ -96,12 +84,26 @@ public class Ruta implements Serializable {
 		this.stanice = stanice;
 	}
 
-	public List<Korisnik> getKorisniks() {
-		return this.korisniks;
+	public List<KorisnikHasRuta> getKorisnikHasRutas() {
+		return this.korisnikHasRutas;
 	}
 
-	public void setKorisniks(List<Korisnik> korisniks) {
-		this.korisniks = korisniks;
+	public void setKorisnikHasRutas(List<KorisnikHasRuta> korisnikHasRutas) {
+		this.korisnikHasRutas = korisnikHasRutas;
+	}
+
+	public KorisnikHasRuta addKorisnikHasRuta(KorisnikHasRuta korisnikHasRuta) {
+		getKorisnikHasRutas().add(korisnikHasRuta);
+		korisnikHasRuta.setRuta(this);
+
+		return korisnikHasRuta;
+	}
+
+	public KorisnikHasRuta removeKorisnikHasRuta(KorisnikHasRuta korisnikHasRuta) {
+		getKorisnikHasRutas().remove(korisnikHasRuta);
+		korisnikHasRuta.setRuta(null);
+
+		return korisnikHasRuta;
 	}
 
 	public Korisnik getKorisnik() {
@@ -112,12 +114,26 @@ public class Ruta implements Serializable {
 		this.korisnik = korisnik;
 	}
 
-	public List<Muzej> getMuzejs() {
-		return this.muzejs;
+	public List<RutaHasMuzej> getRutaHasMuzejs() {
+		return this.rutaHasMuzejs;
 	}
 
-	public void setMuzejs(List<Muzej> muzejs) {
-		this.muzejs = muzejs;
+	public void setRutaHasMuzejs(List<RutaHasMuzej> rutaHasMuzejs) {
+		this.rutaHasMuzejs = rutaHasMuzejs;
+	}
+
+	public RutaHasMuzej addRutaHasMuzej(RutaHasMuzej rutaHasMuzej) {
+		getRutaHasMuzejs().add(rutaHasMuzej);
+		rutaHasMuzej.setRuta(this);
+
+		return rutaHasMuzej;
+	}
+
+	public RutaHasMuzej removeRutaHasMuzej(RutaHasMuzej rutaHasMuzej) {
+		getRutaHasMuzejs().remove(rutaHasMuzej);
+		rutaHasMuzej.setRuta(null);
+
+		return rutaHasMuzej;
 	}
 
 }

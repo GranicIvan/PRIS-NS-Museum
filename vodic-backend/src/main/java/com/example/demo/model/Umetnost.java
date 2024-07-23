@@ -1,21 +1,12 @@
 package com.example.demo.model;
 
 import java.io.Serializable;
+import jakarta.persistence.*;
 import java.util.List;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.NamedQuery;
 
 
 /**
- * The persistent class for the Umetnost database table.
+ * The persistent class for the umetnost database table.
  * 
  */
 @Entity
@@ -27,24 +18,13 @@ public class Umetnost implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idUmetnost;
 
-	@Column(name="Naziv")
 	private String naziv;
 
-	@Column(name="Opis")
 	private String opis;
 
-	//bi-directional many-to-many association to Licnost
-	@ManyToMany
-	@JoinTable(
-		name="Licnost_did_Umetnost"
-		, joinColumns={
-			@JoinColumn(name="Umetnost_idUmetnost")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="Licnost_idLicnost")
-			}
-		)
-	private List<Licnost> licnosts;
+	//bi-directional many-to-one association to LicnostDidUmetnost
+	@OneToMany(mappedBy="umetnost")
+	private List<LicnostDidUmetnost> licnostDidUmetnosts;
 
 	public Umetnost() {
 	}
@@ -73,12 +53,26 @@ public class Umetnost implements Serializable {
 		this.opis = opis;
 	}
 
-	public List<Licnost> getLicnosts() {
-		return this.licnosts;
+	public List<LicnostDidUmetnost> getLicnostDidUmetnosts() {
+		return this.licnostDidUmetnosts;
 	}
 
-	public void setLicnosts(List<Licnost> licnosts) {
-		this.licnosts = licnosts;
+	public void setLicnostDidUmetnosts(List<LicnostDidUmetnost> licnostDidUmetnosts) {
+		this.licnostDidUmetnosts = licnostDidUmetnosts;
+	}
+
+	public LicnostDidUmetnost addLicnostDidUmetnost(LicnostDidUmetnost licnostDidUmetnost) {
+		getLicnostDidUmetnosts().add(licnostDidUmetnost);
+		licnostDidUmetnost.setUmetnost(this);
+
+		return licnostDidUmetnost;
+	}
+
+	public LicnostDidUmetnost removeLicnostDidUmetnost(LicnostDidUmetnost licnostDidUmetnost) {
+		getLicnostDidUmetnosts().remove(licnostDidUmetnost);
+		licnostDidUmetnost.setUmetnost(null);
+
+		return licnostDidUmetnost;
 	}
 
 }
