@@ -10,4 +10,5 @@ public interface LicnostRepo extends JpaRepository<Licnost, Integer> {
 
 	Optional<Licnost> findByImeAndPrezime(String ime, String prezime);
 	Optional<Licnost> findById(Integer id);
+	Licnost findByidLicnost(int idLicnost);
 }
