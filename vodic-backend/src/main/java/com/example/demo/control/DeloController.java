@@ -20,9 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Delo;
 import com.example.demo.model.Licnost;
 import com.example.demo.model.Period;
-import com.example.demo.repository.DeloRepository;
-import com.example.demo.repository.LicnostRepository;
-import com.example.demo.repository.PeriodRepository;
+import com.example.demo.repo.LicnostRepo;
+import com.example.demo.repo.PeriodRepo;
+import com.example.demo.repo.DeloRepo;
+import com.example.demo.repo.LicnostRepo;
+import com.example.demo.repo.PeriodRepo;
 
 
 @RestController
@@ -30,11 +32,11 @@ import com.example.demo.repository.PeriodRepository;
 public class DeloController {
 
 	@Autowired
-	DeloRepository deloRepo;
+	DeloRepo deloRepo;
 	@Autowired
-	LicnostRepository licnostRepo;
+	LicnostRepo licnostRepo;
 	@Autowired
-	PeriodRepository periodRepo;
+	PeriodRepo periodRepo;
 	
 	@GetMapping
     public ResponseEntity<List<Delo>> getAllDela() {
@@ -85,8 +87,8 @@ public class DeloController {
                                  .body("There is no licnost or period with given details");
         }
 
-        delo.setGodina_nastanka(updatedDelo.getGodina_nastanka());
-        delo.setKratki_opis(updatedDelo.getKratki_opis());
+        delo.setGodinaNastanka(updatedDelo.getGodinaNastanka());
+        delo.setKratkiOpis(updatedDelo.getKratkiOpis());
         delo.setNaziv(updatedDelo.getNaziv());
         delo.setTxt0(updatedDelo.getTxt0());
         delo.setTxt1(updatedDelo.getTxt1());
