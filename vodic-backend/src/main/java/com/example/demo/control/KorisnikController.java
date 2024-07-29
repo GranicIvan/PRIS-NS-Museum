@@ -53,7 +53,7 @@ public class KorisnikController {
 	
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Korisnik> getLicnostById(@PathVariable Integer id) {
+	public ResponseEntity<Korisnik> getKorisnikById(@PathVariable Integer id) {
 		Optional<Korisnik> korisnik = kr.findById(id);
 		if (korisnik.isPresent()) {
 			return ResponseEntity.ok(korisnik.get());
@@ -63,7 +63,7 @@ public class KorisnikController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<Korisnik> updateLicnost(@PathVariable Integer id, @RequestBody Korisnik korisnikDetails) {
+	public ResponseEntity<Korisnik> updateKorisnik(@PathVariable Integer id, @RequestBody Korisnik korisnikDetails) {
 		Optional<Korisnik> licnostOptional = kr.findById(id);
 		if (licnostOptional.isPresent()) {
 			Korisnik korisnik = licnostOptional.get();
@@ -83,7 +83,7 @@ public class KorisnikController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> deleteLicnost(@PathVariable Integer id) {
+	public ResponseEntity<Void> deleteKorisnik(@PathVariable Integer id) {
 		Optional<Korisnik> licnostOptional = kr.findById(id);
 		if (licnostOptional.isPresent()) {
 			kr.deleteById(id);
