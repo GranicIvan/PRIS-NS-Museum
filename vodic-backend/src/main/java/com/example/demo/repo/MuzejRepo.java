@@ -12,6 +12,6 @@ public interface MuzejRepo extends JpaRepository<Muzej, Integer> {
 	
 	Optional<Muzej> findByNaziv(String naziv);
 	Optional<Muzej> findById(Integer id);
-	Muzej findByidMuzej(int idMuzej);
+	Muzej findByidPERIOD(int idMuzej);
 	
 }
