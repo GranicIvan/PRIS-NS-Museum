@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Licnost;
@@ -85,6 +86,16 @@ public class LicnostController {
 		} else {
 			return ResponseEntity.notFound().build();
 		}
+	}
+	
+	@GetMapping("/search")
+	public ResponseEntity<List<Licnost>> searchLicnostByNameAndSurname(@RequestParam String ime, @RequestParam String prezime) {
+	    List<Licnost> licnosti = lr.findAllByImeContainingIgnoreCaseAndPrezimeContainingIgnoreCase(ime, prezime);
+	    if (licnosti.isEmpty()) {
+	        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	    } else {
+	        return new ResponseEntity<>(licnosti, HttpStatus.OK);
+	    }
 	}
 
 }
