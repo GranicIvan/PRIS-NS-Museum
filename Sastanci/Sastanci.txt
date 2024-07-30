@@ -16,3 +16,14 @@ Prisustvovali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara To
 4. sastanak - odrzan 23.7.2024.
 Prisustvali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara Todorovic, Milica Cucic Topalov
 -Tema: Namestanje problema sa bazom, podela crud operacija po tabelama koje imamo u bazi, dogovor oko narednog sprint review-a, dogovor za sledeci sastanak
+
+5. sastanak - odrzan 29.7.2024.
+Prisustvali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara Todorovic, Milica Cucic Topalov
+-Tema: Pregled dosadasnjih uradjenih prica, priprema za review
+
+6. sastanak - odrzan 30.7.2024.
+Prisustvali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara Todorovic, Milica Cucic Topalov
+-Tema: iIzmena backlog-a, dogovor za dalju podelu prica, priprema za frontend
+
+
+
