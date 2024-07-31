@@ -13,4 +13,6 @@ public interface LicnostRepo extends JpaRepository<Licnost, Integer> {
 	Optional<Licnost> findById(Integer id);
 	Licnost findByidLicnost(int idLicnost);
 	List<Licnost> findAllByImeContainingIgnoreCaseAndPrezimeContainingIgnoreCase(String ime, String prezime);
+	List<Licnost> findAllByPeriod_IdPERIOD(int idPeriod);
+
 }

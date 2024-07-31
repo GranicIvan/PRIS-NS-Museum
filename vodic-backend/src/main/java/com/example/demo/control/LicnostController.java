@@ -97,5 +97,16 @@ public class LicnostController {
 	        return new ResponseEntity<>(licnosti, HttpStatus.OK);
 	    }
 	}
+	@GetMapping("/searchByPeriod")
+	public ResponseEntity<?> pretragaPoPeriodu(@RequestParam int periodId) {
+	    List<Licnost> licnosti = lr.findAllByPeriod_IdPERIOD(periodId);
+	    if (licnosti.isEmpty()) {
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Ne postoji licnost u ovom periodu.");
+	    }
+	    return ResponseEntity.ok(licnosti);
+	}
+
+
+	
 
 }
