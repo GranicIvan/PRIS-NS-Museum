@@ -49,7 +49,7 @@
 
         ]
     },
-    "Admin_dodavanje_rute":
+    "Dodavanje rute":
     {
         "index": 4,
         "story_pts": "5",
@@ -78,7 +78,7 @@
 
         ]
     },
-    "Admin_izmena_rute":
+    "Izmena rute":
     {
         "index": 5,
         "story_pts": "3",
@@ -108,16 +108,16 @@
         ]
     },
 
-    "Admin_dodavanje_muzeja":
+    "Dodavanje muzeja":
     {
         "index": 6,
         "story_pts": "3",
         "date_created": "14. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "26.07.2024.",
+        "date_completed": "29.07.2024.",
         "story": "Administrator moze da dodaje nove muzeje i informacije o njima",
         "comment": "",
         "acceptance criteria":
@@ -144,10 +144,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "26.07.2024.",
+        "date_completed": "29.07.2024.",
         "story": "Administrator moze da izmeni podatke o postojecem muzeju",
         "comment": "Muzej sadrzi naziv, adresu, koordinate, ime na google maps, vremenski period kom pripada i opis ",
         "acceptance criteria":
@@ -168,10 +168,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Milica Cucic Topalov",
+        "date_started": "24.07.2024.",
+        "date_completed": "27.04.2024.",
         "story": "Administrator moze da dodaje novi period ",
         "comment": "Period sadrzi naziv, trajanje, podrucje, opis, stvari koje se mogu videti, umetnike",
         "acceptance criteria":
@@ -192,10 +192,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Milica Cucic Topalov",
+        "date_started": "24.07.2024.",
+        "date_completed": "27.04.2024.",
         "story": "Administrator moze da menja podatke o postojecem periodu",
         "comment": "",
         "acceptance criteria":
@@ -220,10 +220,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Simona Teodorovic",
+        "date_started": "23.07.2024.",
+        "date_completed": "26.07.2024.",
         "story": "Administrator moze da doda novu licnost ",
         "comment": "Licnost ima ime, mesto rodjenja, datum rodjenja, umetnosti kojima se bavio, period pripadanja",
         "acceptance criteria":
@@ -248,10 +248,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Simona Teodorovic",
+        "date_started": "23.07.2024.",
+        "date_completed": "26.07.2024.",
         "story": "Administrator moze da izmeni podatke o postojecoj licnosti",
         "comment": "",
         "acceptance criteria":
@@ -305,10 +305,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "26.07.2024.",
+        "date_completed": "29.07.2024.",
         "story": "Zaposleni u muzejima imaju mogucnost izmene muzeja",
         "comment": "",
         "acceptance criteria":
@@ -329,10 +329,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Simona Teodorovic",
+        "date_started": "23.07.2024.",
+        "date_completed": "27.07.2024.",
         "story": "Zaposleni u muzejima imaju mogucnost dodavanja licnosti u odnosu na umetnicki pravac",
         "comment": "",
         "acceptance criteria":
@@ -357,10 +357,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Simona Teodorovic",
+        "date_started": "23.07.2024.",
+        "date_completed": "26.07.2024.",
         "story": "Zaposleni u muzejima imaju mogucnost izmene licnosti u odnosu na umetnicki pravac",
         "comment": "",
         "acceptance criteria":
@@ -381,10 +381,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Milica Cucic Topalov",
+        "date_started": "24.07.2024.",
+        "date_completed": "27.07.2024.",
         "story": "Zaposleni u muzejima imaju mogucnost dodavanja vremenskog perioda",
         "comment": "",
         "acceptance criteria":
@@ -409,10 +409,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Milica Cucic Toplaov",
+        "date_started": "24.07.2024.",
+        "date_completed": "27.07.2024.",
         "story": "Zaposleni u muzejima imaju mogucnost izmene vremenskog perioda",
         "comment": "",
         "acceptance criteria":
@@ -433,10 +433,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Tamara Todorovic",
+        "date_started": "25.07.2024.",
+        "date_completed": "28.07.2024.",
         "story": "Zaposleni u muzejima imaju mogucnost dodavanja umetnickog dela u odnosu na pravac",
         "comment": "",
         "acceptance criteria":
@@ -461,10 +461,10 @@
         "story_pts": "2",
         "date_created": "13. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Tamara Todorovic",
+        "date_started": "25.07.2024.",
+        "date_completed": "28.07.2024.",
         "story": "Zaposleni u muzejima imaju mogucnost izmene umetnickog dela u odnosu na pravac",
         "comment": "",
         "acceptance criteria":
@@ -848,10 +848,10 @@
         "story_pts": "3",
         "date_created": "11. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "21.06.2024.",
+        "date_completed": "22.06.2024.",
         "story": "Osmisljavanje baze u MySQL",
         "comment": "Baza ce sadrzati pdoatke o periodima, znamenitim ljudima, mestima/muzeijima/znamenitostima, delima, korisnicima, rutama",
         "acceptance criteria":
@@ -869,10 +869,10 @@
         "story_pts": "5",
         "date_created": "11. Apr 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "18.06.2024.",
+        "date_completed": "20.06.2024.",
         "story": "Dizajniranje",
         "comment": "Baza ce sadrzati pdoatke o periodima, znamenitim ljudima, mestima/muzeijima/znamenitostima, delima, korisnicima, rutama",
         "acceptance criteria":
@@ -890,10 +890,10 @@
         "story_pts": "3",
         "date_created": "7. May 2024.",
         "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "20.05.2024.",
+        "date_completed": "22.05.2024.",
         "story": "Pravljenje SQL skripte i pokretanje na bazi na cloud u",
         "comment": "",
         "acceptance criteria":
@@ -909,6 +909,58 @@
             {
                 "test": "Moguce uvodjenje podataka u eclipse",
                 "status": "Passes"
+            }
+        ]
+    },
+        "Izmena umetnosti":
+    {
+        "index": 35,
+        "story_pts": "2",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "DONE",
+        "assigned_to": "Milica Bardak",
+        "date_started": "26.07.2024.",
+        "date_completed": "29.07.2024.",
+        "story": "Zaposleni u muzejima imaju mogucnost izmene umetnosti",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguca izmena umetnosti",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju neuspele izmene umetnosti",
+                "status": "Fails"
+            }
+        ]
+    },
+    "Dodavanje umetnosti":
+    {
+        "index": 36,
+        "story_pts": "2",
+        "date_created": "13. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "DONE",
+        "assigned_to": "Milica Bardak",
+        "date_started": "26.07.2024.",
+        "date_completed": "29.07.2024.",
+        "story": "Zaposleni u muzejima imaju mogucnost dodavanja umetnosti",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguce dodavanje umetnosti",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da fali neki podatak",
+                "status": "Fails"
+            },
+            {
+                "test": "Izbacivanje greske u slucaju da dodavanje umetnosti nije uspelo",
+                "status": "Fails"
             }
         ]
     },

@@ -32,7 +32,8 @@ public class Licnost implements Serializable {
 	private String prezime;
 
 	//bi-directional many-to-one association to Delo
-	@OneToMany(mappedBy="licnost")
+	@OneToMany(mappedBy = "licnost", cascade = CascadeType.ALL, orphanRemoval = true)
+	//@OneToMany(mappedBy="licnost")
 	private List<Delo> delos;
 
 	//bi-directional many-to-one association to Period
@@ -40,7 +41,8 @@ public class Licnost implements Serializable {
 	private Period period;
 
 	//bi-directional many-to-one association to LicnostDidUmetnost
-	@OneToMany(mappedBy="licnost")
+	@OneToMany(mappedBy = "licnost", cascade = CascadeType.ALL, orphanRemoval = true)
+	//@OneToMany(mappedBy="licnost")
 	private List<LicnostDidUmetnost> licnostDidUmetnosts;
 
 	public Licnost() {
