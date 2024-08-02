@@ -57,4 +57,13 @@ public class UmetnostController {
             return false;
         }
     }
+    
+    @GetMapping("/searchByNaziv")
+    public List<Umetnost> search(@RequestParam String naziv) {
+        List<Umetnost> umetnosti = umetnostRepository.findByNaziv(naziv);
+        if (umetnosti.isEmpty()) {
+            System.out.println("Ne postoji umetnost sa nazivom: " + naziv);
+        }
+        return umetnosti;
+    }
 }
