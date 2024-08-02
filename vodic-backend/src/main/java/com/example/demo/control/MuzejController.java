@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Muzej;
@@ -35,10 +36,6 @@ public class MuzejController {
 			return new ResponseEntity<>("Naziv is required.", HttpStatus.BAD_REQUEST);
 		}
 
-		Optional<Muzej> existingLicnost = mr.findByNaziv(muzej.getNaziv());
-		if (existingLicnost.isPresent()) {
-			return new ResponseEntity<>("Muzej already exists.", HttpStatus.CONFLICT);
-		}
 
 		mr.save(muzej);
 		return new ResponseEntity<>("Muzej created successfully.", HttpStatus.CREATED);
@@ -92,5 +89,16 @@ public class MuzejController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
+	@GetMapping("/searchByNaziv")
+	public List<Muzej> searchByNaziv(@RequestParam String naziv){
+		List<Muzej> muzeji = mr.findByNaziv(naziv);
+		if(muzeji.isEmpty()) {
+			System.err.println("Nema muzeja sa imenom:" + naziv);
+		}
+		
+		return muzeji;
+	}
+	
 	
 }
