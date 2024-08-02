@@ -964,6 +964,27 @@
             }
         ]
     },
+        "Pretraga umetnosti":
+    {
+        "index": 37,
+        "story_pts": "3",
+        "date_created": "14. Apr 2024.",
+        "part_ofSprint": "None",
+        "status": "DONE",
+        "assigned_to": "None",
+        "date_started": "2.08.2024.",
+        "date_completed": "2.08.2024.",
+        "story": "Korisnik ima mogućnost da pretrazuje umetnost koja ga zanima",
+        "comment": "",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguća je pretraga umetnosti po njenom nazivu",
+                "status": "Fails"
+            }
+            
+        ]
+    },
 
 }
 
