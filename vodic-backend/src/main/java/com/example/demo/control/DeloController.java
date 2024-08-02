@@ -38,6 +38,10 @@ public class DeloController {
 	@Autowired
 	PeriodRepo periodRepo;
 	
+	public DeloController(DeloRepository deloRepo) {
+        this.deloRepo = deloRepo;
+    }
+	
 	@GetMapping
     public ResponseEntity<List<Delo>> getAllDela() {
         List<Delo> dela = deloRepo.findAll();
@@ -109,4 +113,22 @@ public class DeloController {
 		}
 
 	}
+	
+	@GetMapping("/searchByNazivDelo")
+    public List<Delo> search(@RequestParam String naziv) {
+        List<Delo> dela = deloRepo.findByNaziv(naziv);
+        if (dela.isEmpty()) {
+            System.out.println("Ne postoji delo sa nazivom: " + naziv);
+        }
+        return dela;
+    }
+	
+	@GetMapping("/searchByLicnost")
+    public List<Delo> searchByLicnost(@RequestParam String ime, @RequestParam String prezime) {
+        List<Delo> dela = deloRepo.findByLicnostImeAndPrezime(ime, prezime);
+        if (dela.isEmpty()) {
+            System.out.println("Ne postoji delo za ličnost: " + ime + " " + prezime);
+        }
+        return dela;
+    }
 }
