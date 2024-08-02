@@ -9,4 +9,7 @@ import com.example.demo.model.Delo;
 public interface DeloRepo extends JpaRepository<Delo, Integer>{
 
 	Delo findByIdPERIOD(int idPERIOD);
+	List<Delo> findByNaziv(String naziv);
+	@Query("SELECT d FROM Delo d JOIN d.licnost l WHERE l.ime = :ime AND l.prezime = :prezime")
+    List<Delo> findByLicnostImeAndPrezime(@Param("ime") String ime, @Param("prezime") String prezime);
 }
