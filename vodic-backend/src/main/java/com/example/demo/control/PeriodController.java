@@ -83,13 +83,6 @@ public class PeriodController {
 		}
 	}
 
-	@GetMapping("/search")
-	public List<Period> findPeriodsInRange(@RequestParam int startYear, @RequestParam int endYear) {
-		return pr.findAll().stream()
-				.filter(period -> period.getPocetak_perioda() <= endYear && period.getKraj_perioda() >= startYear)
-				.collect(Collectors.toList());
-	}
-
 	@GetMapping("/periodsByName")
 	public List<Period> getPeriodsByName(@RequestParam("naziv") String naziv) {
 
