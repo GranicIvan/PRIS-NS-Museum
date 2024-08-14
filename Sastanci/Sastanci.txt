@@ -25,5 +25,7 @@ Prisustvali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara Todo
 Prisustvali sastanku: Ivan Granic, Milica Bardak, Simona Teodorovic, Tamara Todorovic, Milica Cucic Topalov
 -Tema: Izmena backlog-a, dogovor za dalju podelu prica, priprema za frontend
 
-
+7. sastanak - održan 12.08.2024.
+Prisustvovali sastanku: Ivan Granić, Tamara Todorovič, Milica Cucić Topalov, Simona Teodorović i Milica Bardak - opravdano odsutne
+- Tema: Podela poslova za priču Ruta, unos informacija u bazu podataka, dogovor za dalji rad, planiranje sprint-a za sledeči review.
 
