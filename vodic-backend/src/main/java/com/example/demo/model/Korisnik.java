@@ -4,6 +4,8 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * The persistent class for the korisnik database table.
@@ -32,10 +34,12 @@ public class Korisnik implements Serializable {
 
 	//bi-directional many-to-one association to KorisnikHasRuta
 	@OneToMany(mappedBy="korisnik")
+	@JsonIgnore
 	private List<KorisnikHasRuta> korisnikHasRutas;
 
 	//bi-directional many-to-one association to Ruta
 	@OneToMany(mappedBy="korisnik")
+	@JsonIgnore
 	private List<Ruta> rutas;
 
 	public Korisnik() {

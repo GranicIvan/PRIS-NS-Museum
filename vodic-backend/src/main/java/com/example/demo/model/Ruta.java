@@ -4,6 +4,8 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * The persistent class for the ruta database table.
@@ -30,7 +32,7 @@ public class Ruta implements Serializable {
 	private String stanice;
 
 	//bi-directional many-to-one association to KorisnikHasRuta
-	@OneToMany(mappedBy="ruta")
+	@OneToMany(mappedBy="ruta")	
 	private List<KorisnikHasRuta> korisnikHasRutas;
 
 	//bi-directional many-to-one association to Korisnik
