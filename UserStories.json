@@ -726,74 +726,7 @@
         ]
     }, 
     
-    "Pravljenje rute u odnosu na period":
-    {
-        "index": 20,
-        "story_pts": "34",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
-        "story": "Korisnik moze da napravi rutu u odnosu na period.",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguce je pravljenje rute u odnosu na postojeci period.",
-                "status": "Fails"
-            }
-        ]
-    },
-    "Pravljenje rute u odnosu na licnost":
-    {
-        "index": 21,
-        "story_pts": "34",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
-        "story": "Korisnik moze da napravi rutu u odnosu na licnost.",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguce je pravljenje rute u odnosu na postojecu licnost.",
-                "status": "Fails"
-            }
-        ]
-    },
-    "Pravljenje rute u odnosu na redosled":
-    {
-        "index": 22,
-        "story_pts": "34",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "None",
-        "status": "TODO",
-        "assigned_to": "None",
-        "date_started": "None",
-        "date_completed": "None",
-        "story": "Korisnik moze da napravi rutu u odnosu na redosled.",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguce je pravljenje rute u odnosu na hronoloski redosled.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguce je pravljenje rute u odnosu na hronoloski redosled opadajuce.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguce je pravljenje rute tako da zahteva sto manje hoda.",
-                "status": "Fails"
-            }
-        ]
-    },
+
 
     "Pravljenje rute vidljivom od strane korisnika":
     {
@@ -912,7 +845,7 @@
             }
         ]
     },
-        "Izmena umetnosti":
+    "Izmena umetnosti":
     {
         "index": 35,
         "story_pts": "2",
@@ -964,7 +897,7 @@
             }
         ]
     },
-        "Pretraga umetnosti":
+    "Pretraga umetnosti":
     {
         "index": 37,
         "story_pts": "3",
@@ -986,6 +919,46 @@
         ]
     },
 
+    "Ispis ruta u HR formatu":
+    {
+        "index": 38,
+        "story_pts": "3",
+        "date_created": "13. Avg 2024.",
+        "part_ofSprint": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "15.08.2024.",
+        "date_completed": "17.07.2024.",
+        "story": "Korinsik moze da pogleda sve rute i da stanice budu ispisane kao imena muzeja",
+        "comment": "Ruta u bazi sadrzi indekse svih muzeja redom, po defaultu se ispisuju samo indeksi svih stanica (muzeja), sa ovim se ispisuju imena. HR znaci human readable",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguc je pregled svih ruta",
+                "status": "Passes"
+            }
+        ]
+    },
+    "Ispis jedne rute u HR formatu":
+    {
+        "index": 39,
+        "story_pts": "3",
+        "date_created": "13. Avg 2024.",
+        "part_ofSprint": "None",
+        "status": "DONE",
+        "assigned_to": "Ivan Granic",
+        "date_started": "15.08.2024.",
+        "date_completed": "17.07.2024.",
+        "story": "Korinsik moze da pogleda jednu rutu (po id) i da stanice budu ispisane kao imena muzeja",
+        "comment": "Ruta u bazi sadrzi indekse svih muzeja redom, po defaultu se ispisuju samo indeksi svih stanica (muzeja), sa ovim se ispisuju imena. HR znaci human readable",
+        "acceptance criteria":
+        [
+            {
+                "test": "Moguc je pregled svih ruta",
+                "status": "Passes"
+            }
+        ]
+    },
 }
 
     
