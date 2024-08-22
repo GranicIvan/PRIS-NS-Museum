@@ -16,7 +16,7 @@ import com.example.demo.repo.RutaRepo;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @RequestMapping("/ruta")
 public class RutaController {
