@@ -65,15 +65,11 @@
         [
             {
                 "test": "Dodavanje rute sa svim neophodnim parametrima ",
-                "status": "Fails"
-            },
-            {
-                "test": "Dodavanje rute sa svim parametrima ",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Dodavanje rute bez parametara, da prikaze odgovrajucu gresku",
-                "status": "Fails"
+                "status": "Passes"
             }
 
         ]
@@ -94,15 +90,11 @@
         [
             {
                 "test": "Menjanje neophodnih parametrima ",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Menjanje parametara koji vec postoje",
-                "status": "Fails"
-            },
-            {
-                "test": "Menjanje parametara koji do sada nisu postojali tj dodavanje",
-                "status": "Fails"
+                "status": "Passes"
             }
 
         ]
@@ -124,15 +116,15 @@
         [
             {
                 "test": "Dodavanje muzeja sa svim neophodnim parametrima ",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Dodavanje muzeja sa svim parametrima ",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Dodavanje muzeja bez parametara, da prikaze odgovrajucu gresku",
-                "status": "Fails"
+                "status": "Passes"
             }
 
         ]
@@ -154,11 +146,11 @@
         [
             {
                 "test": "Moguce je brisanje muzeja",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Moguce je menjati naziv muzeja, opis, adresu , koordinate",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -178,11 +170,11 @@
         [
             {
                 "test": "Izbacivanje greske ukoliko fali parametar tipa naziva i trajanja",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Izbacivanje greske ukoliko takav  period koji zeli da unese vec postoji ",
-                "status": "Fails"
+                "status": "Passes"
             } 
         ]
     },
@@ -202,15 +194,11 @@
         [
             {
                 "test": "Moguce je brisanje perioda",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Moguce je menjanje naziva perioda, trajanja, podrucja, opisa, itd",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguce je dodavanje novih stvari koje pripadaju tom periodu ",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -230,15 +218,11 @@
         [
             {
                 "test": "Izbacivanje greske ukoliko takva licnost vec postoji",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Izbacivanje greske ukoliko se unese bez nekog parametra ",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguce je dodati licnost koja  se bavila sa vise umetnosti",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -258,11 +242,11 @@
         [
             {
                 "test": "Moguce je obrisati postojecu licnost",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Moguce je izmeniti postojece podatke o licnosti",
-                "status": "Fails"
+                "status": "Passes"
             }
          
         ]
@@ -299,134 +283,7 @@
             }
         ]
     },
-    "Izmena_muzeja":
-    {
-        "index": 13,
-        "story_pts": "2",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "Sprint 2",
-        "status": "DONE",
-        "assigned_to": "Ivan Granic",
-        "date_started": "26.07.2024.",
-        "date_completed": "29.07.2024.",
-        "story": "Zaposleni u muzejima imaju mogucnost izmene muzeja",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguca izmena muzeja",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju neuspele izmene muzeja",
-                "status": "Fails"
-            }
-        ]
-    },
-    "Dodavanje licnosti":
-    {
-        "index": 14,
-        "story_pts": "2",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "Sprint 2",
-        "status": "DONE",
-        "assigned_to": "Simona Teodorovic",
-        "date_started": "23.07.2024.",
-        "date_completed": "27.07.2024.",
-        "story": "Zaposleni u muzejima imaju mogucnost dodavanja licnosti u odnosu na umetnicki pravac",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguce dodavanje licnosti",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju da fali neki podatak",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju da dodavanje licnosti nije uspelo",
-                "status": "Fails"
-            }
-        ]
-    },
-    "Izmena licnosti":
-    {
-        "index": 15,
-        "story_pts": "2",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "Sprint 2",
-        "status": "DONE",
-        "assigned_to": "Simona Teodorovic",
-        "date_started": "23.07.2024.",
-        "date_completed": "26.07.2024.",
-        "story": "Zaposleni u muzejima imaju mogucnost izmene licnosti u odnosu na umetnicki pravac",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguca izmena licnosti",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju da izmena nije uspela",
-                "status": "Fails"
-            }
-        ]
-    },
-    "Dodavanje perioda":
-    {
-        "index": 16,
-        "story_pts": "2",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "Sprint 2",
-        "status": "DONE",
-        "assigned_to": "Milica Cucic Topalov",
-        "date_started": "24.07.2024.",
-        "date_completed": "27.07.2024.",
-        "story": "Zaposleni u muzejima imaju mogucnost dodavanja vremenskog perioda",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguce dodavanje vremenskog perioda",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju da dodavanje vremenskog perioda nije uspelo",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju da fali podatak o vremenskom periodu",
-                "status": "Fails"
-            }
-        ]
-    },
-    "Izmena perioda":
-    {
-        "index": 17,
-        "story_pts": "2",
-        "date_created": "13. Apr 2024.",
-        "part_ofSprint": "Sprint 2",
-        "status": "DONE",
-        "assigned_to": "Milica Cucic Toplaov",
-        "date_started": "24.07.2024.",
-        "date_completed": "27.07.2024.",
-        "story": "Zaposleni u muzejima imaju mogucnost izmene vremenskog perioda",
-        "comment": "",
-        "acceptance criteria":
-        [
-            {
-                "test": "Moguca izmena vremenskog perioda",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju da izmena vremenskog perioda nije uspela",
-                "status": "Fails"
-            }
-        ]
-    },
+    
     "Dodavanje dela":
     {
         "index": 18,
@@ -443,15 +300,15 @@
         [
             {
                 "test": "Moguce dodavanje umetnickog dela",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Izbacivanje greske u slucaju da dodavanje umetnickog dela nije uspelo",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Izbacivanje greske u slucaju da fali podatak o umetnickom delu",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -471,11 +328,11 @@
         [
             {
                 "test": "Moguca izmena umetnickog dela",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Izbacivanje greske u slucaju da izmena umetnickog dela nije uspela",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -547,20 +404,8 @@
         "acceptance criteria":
         [
             {
-                "test": "Moguća je pretraga muzeja po lokaciji.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga muzeja po epohi.",
-                "status": "Fails"
-            },
-            {
                 "test": "Moguca je pretraga muzeja po nazivu.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga muzeja po adresi.",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -581,19 +426,11 @@
         [
             {
                 "test": "Moguća je pretraga licnosti po imenu i prezimenu.",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
-                "test": "Moguca je pretraga licnosti po nazivima dela.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga licnosti po epohi.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga licnosti po godini rodjenja.",
-                "status": "Fails"
+                "test": "Moguca je pretraga licnosti po id perioda.",
+                "status": "Passes"
             }
         ]
     },
@@ -613,28 +450,12 @@
         "acceptance criteria":
         [
             {
-                "test": "Moguća je pretraga dela po imenu i prezimenu autora.",
-                "status": "Fails"
+                "test": "Moguća je pretraga dela po imenu i prezimenu licnosti.",
+                "status": "Passes"
             },
             {
                 "test": "Moguca je pretraga dela po nazivu.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga dela po epohi.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga dela po godini nastajanja.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga dela po starosti.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga dela po vrednosti.",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -654,16 +475,12 @@
         "acceptance criteria":
         [
             {
-                "test": "Moguća je pretraga epohe u odredjenom trajanju.",
-                "status": "Fails"
-            },
-            {
-                "test": "Moguca je pretraga epohe po vrsti umetnosti.",
-                "status": "Fails"
+                "test": "Moguća je pretraga epohe po nazivu.",
+                "status": "Passes"
             },
             {
                 "test": "Moguca je pretraga epohe po godini pocetka.",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -861,11 +678,7 @@
         [
             {
                 "test": "Moguca izmena umetnosti",
-                "status": "Fails"
-            },
-            {
-                "test": "Izbacivanje greske u slucaju neuspele izmene umetnosti",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -885,15 +698,15 @@
         [
             {
                 "test": "Moguce dodavanje umetnosti",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Izbacivanje greske u slucaju da fali neki podatak",
-                "status": "Fails"
+                "status": "Passes"
             },
             {
                 "test": "Izbacivanje greske u slucaju da dodavanje umetnosti nije uspelo",
-                "status": "Fails"
+                "status": "Passes"
             }
         ]
     },
@@ -913,7 +726,7 @@
         [
             {
                 "test": "Moguća je pretraga umetnosti po njenom nazivu",
-                "status": "Fails"
+                "status": "Passes"
             }
             
         ]
