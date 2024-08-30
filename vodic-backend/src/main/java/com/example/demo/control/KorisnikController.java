@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Korisnik;
-import com.example.demo.model.Korisnik;
-import com.example.demo.model.Korisnik;
 import com.example.demo.repo.KorisnikRepo;
 @CrossOrigin(origins="http://localhost:4200")
 @RestController
@@ -99,14 +97,12 @@ public class KorisnikController {
 	@GetMapping("/searchByEmail")
 	public Korisnik searchByEmail(@RequestParam String email){
 		
-		Korisnik trazeni = kr.findByEmail(email);
+		Optional<Korisnik> trazeni = kr.findByEmail(email);
 		if(trazeni == null) {
 			System.err.println("Ne postoji korisnik sa email-om: " + email);			
 		}
-		return trazeni;
+		return trazeni.get();
 	}
-	
-	
-	
+	    
 	
 }
