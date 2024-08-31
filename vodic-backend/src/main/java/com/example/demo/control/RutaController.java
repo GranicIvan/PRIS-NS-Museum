@@ -134,7 +134,7 @@ public class RutaController {
     public Ruta personalised(@PathVariable Integer id, @PathVariable Integer uid) {
     	
     	//DELETE - just for debugging
-    	System.out.println("$$$$$$ id rute: " + id + ",  user id: "+ uid);
+    	System.out.println("- - - - - - - id rute: " + id + ",  user id: "+ uid);
     	
     	Optional<Ruta> rOptional = rr.findById(id); 
     	if(rOptional.isEmpty()) {
@@ -144,6 +144,7 @@ public class RutaController {
     	Ruta r = rOptional.get();
     	
     	
+    	
     	Optional<Korisnik> kOptional = kr.findById(uid);
     	if(kOptional.isEmpty()) {
     		System.err.println("Nema korisnika sa id: " + id);
@@ -151,10 +152,28 @@ public class RutaController {
     	}
     	Korisnik k = kOptional.get();
     	
-    	ArrayList<Integer> idPOI = extractPOI(k);
+    	
+    	
+    	if(k.getPreference().isEmpty()) {
+    		System.err.println("Korisnik nema preference");
+    		return null;    		
+    	}
+    	
+    	
+    	
+    	ArrayList<Muzej> idPOI = extractPOI(k);
     	
     	//od ovih id trazim gde su i onda stavim to u mapu
     	// prvo napravim mapu sa svim muzejima
+    	
+    	
+    	ArrayList<Integer> lista =  new ArrayList<Integer>();
+    	
+    	String[] stanice = r.getStanice().trim().split(",");
+    	
+    	for(String s: stanice) {
+    		lista.add( Integer.parseInt( s.trim()) );
+    	}
     	
     	
     	
@@ -162,19 +181,28 @@ public class RutaController {
     }
     
     
-    ArrayList<Integer> extractPOI(Korisnik k) {//POI - point of interest in this case art piece
+    ArrayList<Muzej> extractPOI(Korisnik k) {//POI - point of interest in this case art piece
     	
-    	String preferences = k.getPreference();
+    	String preferences = k.getPreference().trim();
     	    	
-    	String[] idInString = preferences.split(preferences, ',');  
+    	String[] idInString = preferences.split(","); 
+    	
+    	
     	
     	ArrayList<Integer> result  = new ArrayList<Integer>();
     	
     	for(String s : idInString) {
-    		result.add( Integer.parseInt(s) );
+    		
+    		result.add( Integer.parseInt(s.trim()) );
     	}
     	
-		return result;     	
+    	ArrayList<Muzej> muzeji = new ArrayList<Muzej>();
+    	
+    	for(Integer i : result) {
+    		muzeji.add( mr.findByidPERIOD(i) );
+    	}
+    	
+		return muzeji;     	
     }
     
     
