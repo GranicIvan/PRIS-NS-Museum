@@ -2,7 +2,9 @@ package com.example.demo.control;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +12,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.example.demo.model.Delo;
 import com.example.demo.model.Korisnik;
 import com.example.demo.model.Muzej;
 import com.example.demo.model.Ruta;
+import com.example.demo.repo.DeloRepo;
 import com.example.demo.repo.KorisnikRepo;
 import com.example.demo.repo.MuzejRepo;
 import com.example.demo.repo.RutaRepo;
@@ -35,6 +39,9 @@ public class RutaController {
     
     @Autowired
     KorisnikRepo kr;
+    
+    @Autowired
+    DeloRepo dr;
     
     
 	@GetMapping
@@ -161,7 +168,7 @@ public class RutaController {
     	
     	
     	
-    	ArrayList<Muzej> idPOI = extractPOI(k);
+    	ArrayList<Delo> dela = extractDelaKojaKorisnikZeli(k);
     	
     	//od ovih id trazim gde su i onda stavim to u mapu
     	// prvo napravim mapu sa svim muzejima
@@ -175,13 +182,18 @@ public class RutaController {
     		lista.add( Integer.parseInt( s.trim()) );
     	}
     	
+    	Map<Integer, Delo> mapa = new HashMap<Integer, Delo>();
     	
+    	for(Delo d : dela) {
+    		d.getKratkiOpis();
+    		mapa.put( Integer.parseInt( d.getKratkiOpis().trim() )  , d);
+    	}
     	
     	return null;
     }
     
     
-    ArrayList<Muzej> extractPOI(Korisnik k) {//POI - point of interest in this case art piece
+    ArrayList<Delo> extractDelaKojaKorisnikZeli(Korisnik k) {//POI - point of interest in this case art piece
     	
     	String preferences = k.getPreference().trim();
     	    	
@@ -196,13 +208,13 @@ public class RutaController {
     		result.add( Integer.parseInt(s.trim()) );
     	}
     	
-    	ArrayList<Muzej> muzeji = new ArrayList<Muzej>();
+    	ArrayList<Delo> dela = new ArrayList<Delo>();
     	
     	for(Integer i : result) {
-    		muzeji.add( mr.findByidPERIOD(i) );
+    		dela.add( dr.findByIdPERIOD(i) );
     	}
     	
-		return muzeji;     	
+		return dela;     	
     }
     
     
