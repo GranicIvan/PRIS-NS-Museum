@@ -127,6 +127,9 @@ public class RutaController {
     @GetMapping("/personalisedRoute/{id}/{uid}") // uid stands for user ID
     public Ruta personalised(@PathVariable Integer id, @PathVariable Integer uid) {
     	
+    	//DELETE - just for debugging
+    	System.out.println("$$$$$$ id rute: " + id + ",  user id: "+ uid);
+    	
     	Optional<Ruta> rOptional = rr.findById(id); 
     	if(rOptional.isEmpty()) {
     		System.err.println("Nema rute sa id: " + id);
