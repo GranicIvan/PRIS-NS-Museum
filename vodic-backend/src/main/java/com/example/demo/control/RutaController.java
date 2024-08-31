@@ -42,6 +42,12 @@ public class RutaController {
 		return rr.findAll();
 	}
 	
+	@GetMapping("/{id}")
+    public ResponseEntity<Ruta> getRutaById(@PathVariable Integer id) {
+        return rr.findById(id)
+            .map(ruta -> ResponseEntity.ok().body(ruta))
+            .orElse(ResponseEntity.notFound().build());
+    }
 	
 	@PostMapping
 	public ResponseEntity<String> createRuta(@RequestBody Ruta ruta) {
