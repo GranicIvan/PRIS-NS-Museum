@@ -138,10 +138,10 @@ public class RutaController {
     }
     
     @GetMapping("/personalisedRoute/{id}/{uid}") // uid stands for user ID
-    public Ruta personalised(@PathVariable Integer id, @PathVariable Integer uid) {
+    public String personalised(@PathVariable Integer id, @PathVariable Integer uid) {
     	
     	//DELETE - just for debugging
-    	System.out.println("- - - - - - - id rute: " + id + ",  user id: "+ uid);
+    	System.err.println("- - - - - - - id rute: " + id + ",  user id: "+ uid);
     	
     	Optional<Ruta> rOptional = rr.findById(id); 
     	if(rOptional.isEmpty()) {
@@ -167,33 +167,41 @@ public class RutaController {
     	}
     	
     	
+    	System.err.println("Pre extracta %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     	
     	ArrayList<Delo> dela = extractDelaKojaKorisnikZeli(k);
     	
-    	//od ovih id trazim gde su i onda stavim to u mapu
-    	// prvo napravim mapu sa svim muzejima
     	
-    	
-    	ArrayList<Integer> lista =  new ArrayList<Integer>();
-    	
+    	//To su stanice (muzeji) koji se nalaze na ruti
     	String[] stanice = r.getStanice().trim().split(",");
+    	//Id evi od tih muzeja
+    	ArrayList<Integer> lista =  new ArrayList<Integer>();
     	
     	for(String s: stanice) {
     		lista.add( Integer.parseInt( s.trim()) );
     	}
     	
-    	Map<Integer, Delo> mapa = new HashMap<Integer, Delo>();
+    	
+    	//Sada rasporedjujemo dela po muzejima
+    	Map<Integer, List<Delo>> mapa = new HashMap<Integer, List<Delo>>();
+    	
     	
     	for(Delo d : dela) {
     		d.getKratkiOpis();
-    		mapa.put( Integer.parseInt( d.getKratkiOpis().trim() )  , d);
+//    		mapa.put( Integer.parseInt( d.getKratkiOpis().trim() )  , d);
+    		Integer key = Integer.parseInt( d.getKratkiOpis().trim());
+    		mapa.computeIfAbsent( key , newValue -> new ArrayList<>()).add(d);
+
     	}
     	
-    	return null;
+    	System.err.println("OVDE $$$$$$$$$");
+    	extraxtInfo(mapa, lista, r );
+    	
+    	return "Rezultat";
     }
     
     
-    ArrayList<Delo> extractDelaKojaKorisnikZeli(Korisnik k) {//POI - point of interest in this case art piece
+    private ArrayList<Delo> extractDelaKojaKorisnikZeli(Korisnik k) {//POI - point of interest in this case art piece
     	
     	String preferences = k.getPreference().trim();
     	    	
@@ -213,8 +221,38 @@ public class RutaController {
     	for(Integer i : result) {
     		dela.add( dr.findByIdPERIOD(i) );
     	}
+    	    	
     	
 		return dela;     	
+    }
+    
+    
+    private String extraxtInfo(Map<Integer, List<Delo>> mapa, ArrayList<Integer> listaMuzeja, Ruta r) {
+    	
+    	StringBuilder sb = new StringBuilder();
+    	
+    	sb.append("Ruta: "+r.getImeRute() + "\n");
+    	sb.append("Opis " + r.getOpis() + "\n\n");
+    	
+    	for(Integer i: listaMuzeja) {
+    		Muzej muzej = mr.findByidPERIOD(i);
+    		sb.append("================================\n");
+    		sb.append(muzej.getNaziv()+"\n");
+    		
+    		List<Delo> dela = mapa.get(i); //Dela koja se nalaze u muzeju i kor zeli da ih vidi
+    		
+    		for(Delo d: dela) {
+    			sb.append(d.getNaziv() + "\n");
+    			sb.append("Godina nastanka:" + d.getGodinaNastanka() + "\n");
+    			sb.append(d.getTxt0() + "\n");
+    			sb.append("--------------------------------\n\n");
+    		}
+    		
+    		sb.append("================================\n\n");
+    	}
+    	
+    	System.err.println(sb.toString());
+    	return sb.toString();
     }
     
     
