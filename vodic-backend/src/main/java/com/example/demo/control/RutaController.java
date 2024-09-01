@@ -141,7 +141,7 @@ public class RutaController {
     public String personalised(@PathVariable Integer id, @PathVariable Integer uid) {
     	
     	
-    	
+    	//Trazimo rutu
     	Optional<Ruta> rOptional = rr.findById(id); 
     	if(rOptional.isEmpty()) {
     		System.err.println("Nema rute sa id: " + id);
@@ -150,7 +150,7 @@ public class RutaController {
     	Ruta r = rOptional.get();
     	
     	
-    	
+    	//Trazimo korisnika
     	Optional<Korisnik> kOptional = kr.findById(uid);
     	if(kOptional.isEmpty()) {
     		System.err.println("Nema korisnika sa id: " + id);
@@ -159,17 +159,14 @@ public class RutaController {
     	Korisnik k = kOptional.get();
     	
     	
-    	
+    	//Ako korisnik nema preference izlazimo
     	if(k.getPreference().isEmpty()) {
     		System.err.println("Korisnik nema preference");
     		return null;    		
     	}
     	
-    	
-    	
-    	
+    	//od liste ID-eva dobijamo lsitu dela
     	ArrayList<Delo> dela = extractDelaKojaKorisnikZeli(k);
-    	
     	
     	
     	//To su stanice (muzeji) koji se nalaze na ruti
@@ -188,14 +185,11 @@ public class RutaController {
     	
     	for(Delo d : dela) {
     		d.getKratkiOpis();
-//    		mapa.put( Integer.parseInt( d.getKratkiOpis().trim() )  , d);
     		Integer key = Integer.parseInt( d.getKratkiOpis().trim());
     		mapa.computeIfAbsent( key , newValue -> new ArrayList<>()).add(d);
 
     	}
     	
-    	
-    	//extraxtInfo(mapa, lista, r );
     	
     	return extraxtInfo(mapa, lista, r );
     }
