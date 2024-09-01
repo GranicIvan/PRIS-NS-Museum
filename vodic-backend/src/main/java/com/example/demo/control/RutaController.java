@@ -184,10 +184,9 @@ public class RutaController {
     	
     	
     	for(Delo d : dela) {
-    		d.getKratkiOpis();
-    		Integer key = Integer.parseInt( d.getKratkiOpis().trim());
-    		mapa.computeIfAbsent( key , newValue -> new ArrayList<>()).add(d);
 
+    		Integer key = Integer.parseInt( d.getKratkiOpis().trim()); //Kratak opis je ID u kom je muzeju
+    		mapa.computeIfAbsent( key , newValue -> new ArrayList<>()).add(d);
     	}
     	
     	
