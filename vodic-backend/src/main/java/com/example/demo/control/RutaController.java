@@ -140,8 +140,7 @@ public class RutaController {
     @GetMapping("/personalisedRoute/{id}/{uid}") // uid stands for user ID
     public String personalised(@PathVariable Integer id, @PathVariable Integer uid) {
     	
-    	//DELETE - just for debugging
-    	System.err.println("- - - - - - - id rute: " + id + ",  user id: "+ uid);
+    	
     	
     	Optional<Ruta> rOptional = rr.findById(id); 
     	if(rOptional.isEmpty()) {
@@ -167,9 +166,10 @@ public class RutaController {
     	}
     	
     	
-    	System.err.println("Pre extracta %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+    	
     	
     	ArrayList<Delo> dela = extractDelaKojaKorisnikZeli(k);
+    	
     	
     	
     	//To su stanice (muzeji) koji se nalaze na ruti
@@ -194,10 +194,10 @@ public class RutaController {
 
     	}
     	
-    	System.err.println("OVDE $$$$$$$$$");
-    	extraxtInfo(mapa, lista, r );
     	
-    	return "Rezultat";
+    	//extraxtInfo(mapa, lista, r );
+    	
+    	return extraxtInfo(mapa, lista, r );
     }
     
     
@@ -216,11 +216,13 @@ public class RutaController {
     		result.add( Integer.parseInt(s.trim()) );
     	}
     	
+    	//TODO Neko delo moze biti null proveriti za to
     	ArrayList<Delo> dela = new ArrayList<Delo>();
     	
     	for(Integer i : result) {
     		dela.add( dr.findByIdPERIOD(i) );
     	}
+    	//dela.remove(null);
     	    	
     	
 		return dela;     	
@@ -241,6 +243,9 @@ public class RutaController {
     		
     		List<Delo> dela = mapa.get(i); //Dela koja se nalaze u muzeju i kor zeli da ih vidi
     		
+    		
+    		if(dela == null) continue;
+    		
     		for(Delo d: dela) {
     			sb.append(d.getNaziv() + "\n");
     			sb.append("Godina nastanka:" + d.getGodinaNastanka() + "\n");
@@ -251,6 +256,7 @@ public class RutaController {
     		sb.append("================================\n\n");
     	}
     	
+    	//for debuging only
     	System.err.println(sb.toString());
     	return sb.toString();
     }
