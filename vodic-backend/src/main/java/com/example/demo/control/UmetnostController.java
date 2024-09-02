@@ -11,7 +11,7 @@ import com.example.demo.repo.UmetnostRepo;
 
 @CrossOrigin(origins="http://localhost:4200")
 @RestController
-@RequestMapping("/api/umetnost")
+@RequestMapping("/umetnost")
 public class UmetnostController {
 
     @Autowired

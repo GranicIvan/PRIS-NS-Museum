@@ -29,12 +29,15 @@ public class Delo implements Serializable {
 	private String naziv;
 
 	@Lob
+	@Column(columnDefinition = "longtext")
 	private String txt0;
 
 	@Lob
+	@Column(columnDefinition = "longtext")
 	private String txt1;
 
 	@Lob
+	@Column(columnDefinition = "longtext")
 	private String txt2;
 
 	//bi-directional many-to-one association to Licnost

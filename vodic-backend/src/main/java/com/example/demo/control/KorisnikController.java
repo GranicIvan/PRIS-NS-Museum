@@ -33,20 +33,14 @@ public class KorisnikController {
 	
 	
 	@PostMapping
-	public ResponseEntity<String> createKorisnik(@RequestBody Korisnik korisnik) {
-
-		if (korisnik.getIme() == null || korisnik.getPrezime() == null) {
-			return new ResponseEntity<>("Ime and Prezime are required.", HttpStatus.BAD_REQUEST);
-		}
-
-		Optional<Korisnik> existingLicnost = kr.findByImeAndPrezime(korisnik.getIme(), korisnik.getPrezime());
-		if (existingLicnost.isPresent()) {
-			return new ResponseEntity<>("Korisnik already exists.", HttpStatus.CONFLICT);
-		}
-
-		kr.save(korisnik);
-		return new ResponseEntity<>("Korisnik created successfully.", HttpStatus.CREATED);
-	}
+	public ResponseEntity<Korisnik> createKorisnik(@RequestBody Korisnik korisnik) {
+        try {
+            Korisnik savedKorisnik = kr.save(korisnik);
+            return new ResponseEntity<>(savedKorisnik, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 	
 	
 	//---------------

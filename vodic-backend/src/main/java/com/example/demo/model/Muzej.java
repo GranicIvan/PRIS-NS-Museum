@@ -4,6 +4,8 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 /**
  * The persistent class for the muzej database table.
@@ -34,16 +36,20 @@ public class Muzej implements Serializable {
 	private String naziv;
 
 	@Lob
+	@Column(columnDefinition = "longtext")
 	private String txt0;
 
 	@Lob
+	@Column(columnDefinition = "longtext")
 	private String txt1;
 
 	@Lob
+	@Column(columnDefinition = "longtext")
 	private String txt2;
 
 	//bi-directional many-to-many association to Period
 	@ManyToMany(mappedBy="muzejs")
+	@JsonManagedReference
 	private List<Period> periods;
 
 	//bi-directional many-to-one association to RutaHasMuzej

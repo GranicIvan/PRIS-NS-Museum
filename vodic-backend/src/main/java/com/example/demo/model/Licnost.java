@@ -4,6 +4,9 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 /**
  * The persistent class for the licnost database table.
@@ -38,6 +41,7 @@ public class Licnost implements Serializable {
 
 	//bi-directional many-to-one association to Period
 	@ManyToOne
+	@JsonManagedReference
 	private Period period;
 
 	//bi-directional many-to-one association to LicnostDidUmetnost
