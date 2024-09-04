@@ -32,3 +32,10 @@ Prisustvovali sastanku: Ivan Granić, Tamara Todorovič, Milica Cucić Topalov, 
 8. sastanak - održan 22.08.2024.
 Prisustvovali sastanku: Ivan Granić, Tamara Todorović, Milica Cucić Topalov, Simona Teodorović, Milica Bardak - opravdano odsutna
 - Tema: Nakon sastanka sa profesorom, sastali smo se kako bismo rasporedili poslove za sledeći sprint, kao i da prodiskutujemo o idejama i savetima koje nam je profesor dao. Napravljen je dogovor oko prezentacije koju predstavljamo, razmatrane su izmene na frondend kao i pripreme za sledeći review. Uvidevši da su funkcionalnosti proširene, shvatili smo da je nemoguće sve uraditi do planiranog roka, te smo ih rasporedili po prioritetu i tako odredili tok rada.
+
+
+9. sastanak - održan 03.09.2024.
+Prisustvovalu sastanku: Ivan Granić, Tamara Todorović, Milica Cucić Topalov, Simona Teodorović, Milica Bardak
+- Tema: Nakon poslednje review sastanka sa profesorom, dogovorena je odbrana projekta. Kako bismo se što bolje pripremili za sutrašnji (04.09.2024.) sastanak, organizovali smo se kako bismo se prisetili i razmenili mišljenja oko projekta koji je urađen. Davali smo sugestije, eventualna unapređenja ili izmene koje bismo izvršili nakon celokupnog osvrta na sve dosad urađeno.
+
+Pored održanih sastanaka, postojala je redovna komunikacija preko grupnog četa i razmene mišljenja, ideja i sugestija.
